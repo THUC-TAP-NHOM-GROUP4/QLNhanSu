@@ -15,23 +15,36 @@ namespace QLNS
         public QLNS()
         {
             InitializeComponent();
+
             ImageList imageList1 = new ImageList();
             imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\19.png"));
             imageList1.Images.Add("key2", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\20.png"));
             imageList1.Images.Add("key3", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\1.png"));
             imageList1.Images.Add("key4", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\16.png"));
-           
-            //initialize the tab control
-            TabControl tabControl1 = new TabControl();
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.ImageList = imageList1;
-            tabControl1.TabPages.Add("tabKey1", "TabText1", "key1"); // icon using ImageKey
-            tabControl1.TabPages.Add("tabKey2", "TabText2", 1);      // icon using ImageIndex
-            this.Controls.Add(tabControl1);
+        
+            ////initialize the tab control
+            //TabControl tabControl1 = new TabControl();
+            //tabControl1.Dock = DockStyle.Fill;
+            //tabControl1.ImageList = imageList1;
+            //tabControl1.TabPages.Add("tabKey1", "TabText1", "key1"); // icon using ImageKey
+            //tabControl1.TabPages.Add("tabKey2", "TabText2", 1);      // icon using ImageIndex
+            //this.Controls.Add(tabControl1);
         }
 
         private void QLNS_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chBChon_Click(object sender, EventArgs e)
+        {
+            cbbPhongBan.Enabled = true;
+            
 
         }
     }
