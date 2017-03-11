@@ -16,10 +16,10 @@ namespace QLNS
         {
             InitializeComponent();
             ImageList imageList1 = new ImageList();
-            imageList1.Images.Add("key1", Image.FromFile(@"E:\STUDY\MTA\3_Third_Year\TheSecond\Thực tập nhóm\Tuan 1\New_QLNS\QLNS\QLNS\Resources\19.png"));
-            imageList1.Images.Add("key2", Image.FromFile(@"E:\STUDY\MTA\3_Third_Year\TheSecond\Thực tập nhóm\Tuan 1\New_QLNS\QLNS\QLNS\Resources\20.png"));
-            imageList1.Images.Add("key3", Image.FromFile(@"E:\STUDY\MTA\3_Third_Year\TheSecond\Thực tập nhóm\Tuan 1\New_QLNS\QLNS\QLNS\Resources\1.png"));
-            imageList1.Images.Add("key4", Image.FromFile(@"E:\STUDY\MTA\3_Third_Year\TheSecond\Thực tập nhóm\Tuan 1\New_QLNS\QLNS\QLNS\Resources\16.png"));
+            imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\19.png"));
+            imageList1.Images.Add("key2", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\20.png"));
+            imageList1.Images.Add("key3", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\1.png"));
+            imageList1.Images.Add("key4", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\16.png"));
            
             //initialize the tab control
             TabControl tabControl1 = new TabControl();

@@ -1,0 +1,8 @@
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\bin\Debug\QLNS.exe.config
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\bin\Debug\QLNS.exe
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\bin\Debug\QLNS.pdb
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\obj\Debug\QLNS.QLNS.resources
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\obj\Debug\QLNS.Properties.Resources.resources
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\obj\Debug\QLNS.csproj.GenerateResource.Cache
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\obj\Debug\QLNS.exe
+E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\obj\Debug\QLNS.pdb
