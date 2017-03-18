@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace QLNS.Controller
 {
     class Controllers
-    {
+    {       
         DataAccess da = new DataAccess();
         public const int MAX = 100;
         public String[] getListDataPhongBan()
@@ -44,7 +45,7 @@ namespace QLNS.Controller
         }
         public String[] getListDataChucVu()
         {
-            DataTable table = da.Query("select ten from PhongBan");
+            DataTable table = da.Query("select ten from ChucVu");
             int n = table.Rows.Count;
             if (n == 0)
             {
@@ -107,6 +108,40 @@ namespace QLNS.Controller
             nv.maTDHV = row["maTDHV"].ToString().Trim();
 
             return nv;
+        }
+        public bool Them(NhanSu nv)
+        {
+
+            SqlParameter[] para =
+                       {
+                new SqlParameter("ten", nv.ten),
+                new SqlParameter("ngaysinh", nv.ngaysinh),
+                new SqlParameter("gioitinh", nv.gioitinh),
+                new SqlParameter("diachi", nv.diachi),
+                new SqlParameter("socmnd", nv.socmnd),
+                new SqlParameter("dienthoai", nv.dienthoai),
+                new SqlParameter("email", nv.email),
+                new SqlParameter("maChucVu", getCode(nv.maChucVu, "ten",  "chucvu" )),
+                new SqlParameter("maluong", nv.maluong),
+                new SqlParameter("maphongban", getCode( nv.maphongban, "ten", "phongban")),
+                new SqlParameter("maTDHV", getCode( nv.maTDHV,"ten", "TrinhDoHocVan")),
+            };
+            da.Query("proc_insertNV", para);
+            return true;
+        }
+        private String getMa(string ten, string ma)
+        {
+            DataTable table = da.Query("select ma from " + "chucvu where ten= N'" + ma + "'");
+            int n = table.Rows.Count;
+            if (n == 0) return "";
+            else return table.Rows[0]["ma"].ToString().Trim();
+        }
+        public String getCode(String key, String typeKey, String tableName)
+        {
+            DataTable table = da.Query("select ma from " + tableName + " where " + typeKey + " = N'" + key + "'"); ;
+            int n = table.Rows.Count;
+            if (n == 0) return "";
+            else return table.Rows[0]["ma"].ToString().Trim();
         }
     }
 }

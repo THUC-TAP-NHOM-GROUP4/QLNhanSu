@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace QLNS
 {
     public partial class QLNS : Form
     {
+        Controllers control = new Controllers();
+        frmAdd add;
         public QLNS()
         {
             InitializeComponent();
@@ -33,6 +36,26 @@ namespace QLNS
 
         private void QLNS_Load(object sender, EventArgs e)
         {
+            dgvNhanSu.DataSource = control.getListNhanVien();
+            dgvNhanSu.Columns["ma"].HeaderText = "Mã";
+            dgvNhanSu.Columns["ten"].HeaderText = "Họ tên";
+            dgvNhanSu.Columns["ngaysinh"].HeaderText = "Ngày sinh";
+            dgvNhanSu.Columns["gioitinh"].HeaderText = "Giới tính";
+            dgvNhanSu.Columns["diachi"].HeaderText = "Địa chỉ";
+            dgvNhanSu.Columns["socmnd"].HeaderText = "CMND";
+            dgvNhanSu.Columns["dienthoai"].HeaderText = "Điện thoại";
+            dgvNhanSu.Columns["email"].HeaderText = "Email";
+            dgvNhanSu.Columns["maChucVu"].HeaderText = "Mã Chức vụ";
+            dgvNhanSu.Columns["maluong"].HeaderText = "Mã lương";
+            dgvNhanSu.Columns["maphongban"].HeaderText = "Mã phòng ban";
+            dgvNhanSu.Columns["maTDHV"].HeaderText = "Mã TDHV";
+
+            dgvNhanSu.Columns["ma"].Width = 60;
+            dgvNhanSu.Columns["ten"].Width = 150;
+            dgvNhanSu.Columns["socmnd"].Width = 100;
+            dgvNhanSu.Columns["email"].Width = 150;
+            dgvNhanSu.Columns["gioitinh"].Width = 70;
+            dgvNhanSu.Columns["ngaysinh"].Width = 70;
 
         }
 
@@ -46,6 +69,12 @@ namespace QLNS
             cbbPhongBan.Enabled = true;
             
 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = new frmAdd(this);
+            add.ShowDialog();
         }
     }
 }
