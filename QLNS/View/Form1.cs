@@ -155,5 +155,12 @@ namespace QLNS
         {
 
         }
+      
+        private void btnTT_DangNhap_Click_1(object sender, EventArgs e)
+        {
+            frmdangnhap fr = new frmdangnhap();
+            fr.ShowDialog();
+            tabControl_Chung.Enabled = true;
+        }
     }
 }

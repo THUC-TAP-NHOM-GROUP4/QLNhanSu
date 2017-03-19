@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNS));
-            this.btnTT_DangNhap = new System.Windows.Forms.Button();
-            this.btnTT_Thoat = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbTT_Thoat = new System.Windows.Forms.PictureBox();
-            this.pbTT_DoiMatKhau = new System.Windows.Forms.PictureBox();
-            this.pbTT_DangNhap = new System.Windows.Forms.PictureBox();
-            this.btnTT_DoiMatKhau = new System.Windows.Forms.Button();
             this.tabControl_Chung = new System.Windows.Forms.TabControl();
             this.tpTrangChu = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -111,10 +104,12 @@
             this.tpLienHe = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_Thoat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DoiMatKhau)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DangNhap)).BeginInit();
+            this.pbTT_Thoat = new System.Windows.Forms.PictureBox();
+            this.pbTT_DoiMatKhau = new System.Windows.Forms.PictureBox();
+            this.pbTT_DangNhap = new System.Windows.Forms.PictureBox();
+            this.btnTT_DoiMatKhau = new System.Windows.Forms.Button();
+            this.btnTT_Thoat = new System.Windows.Forms.Button();
+            this.btnTT_DangNhap = new System.Windows.Forms.Button();
             this.tabControl_Chung.SuspendLayout();
             this.tpTrangChu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -126,83 +121,10 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_Thoat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DoiMatKhau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DangNhap)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTT_DangNhap
-            // 
-            this.btnTT_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTT_DangNhap.Location = new System.Drawing.Point(583, 89);
-            this.btnTT_DangNhap.Name = "btnTT_DangNhap";
-            this.btnTT_DangNhap.Size = new System.Drawing.Size(93, 33);
-            this.btnTT_DangNhap.TabIndex = 1;
-            this.btnTT_DangNhap.Text = "Đăng nhập";
-            this.btnTT_DangNhap.UseVisualStyleBackColor = true;
-            this.btnTT_DangNhap.Click += new System.EventHandler(this.btnTT_DangNhap_Click);
-            // 
-            // btnTT_Thoat
-            // 
-            this.btnTT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTT_Thoat.Location = new System.Drawing.Point(767, 89);
-            this.btnTT_Thoat.Name = "btnTT_Thoat";
-            this.btnTT_Thoat.Size = new System.Drawing.Size(95, 33);
-            this.btnTT_Thoat.TabIndex = 2;
-            this.btnTT_Thoat.Text = "Thoát";
-            this.btnTT_Thoat.UseVisualStyleBackColor = true;
-            this.btnTT_Thoat.Click += new System.EventHandler(this.btnTT_Thoat_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pbTT_Thoat);
-            this.panel1.Controls.Add(this.pbTT_DoiMatKhau);
-            this.panel1.Controls.Add(this.pbTT_DangNhap);
-            this.panel1.Controls.Add(this.btnTT_DoiMatKhau);
-            this.panel1.Controls.Add(this.btnTT_Thoat);
-            this.panel1.Controls.Add(this.btnTT_DangNhap);
-            this.panel1.Location = new System.Drawing.Point(6, 402);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 125);
-            this.panel1.TabIndex = 4;
-            // 
-            // pbTT_Thoat
-            // 
-            this.pbTT_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_Thoat.Image")));
-            this.pbTT_Thoat.Location = new System.Drawing.Point(794, 50);
-            this.pbTT_Thoat.Name = "pbTT_Thoat";
-            this.pbTT_Thoat.Size = new System.Drawing.Size(40, 33);
-            this.pbTT_Thoat.TabIndex = 6;
-            this.pbTT_Thoat.TabStop = false;
-            this.pbTT_Thoat.Click += new System.EventHandler(this.btnTT_Thoat_Click);
-            // 
-            // pbTT_DoiMatKhau
-            // 
-            this.pbTT_DoiMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_DoiMatKhau.Image")));
-            this.pbTT_DoiMatKhau.Location = new System.Drawing.Point(695, 50);
-            this.pbTT_DoiMatKhau.Name = "pbTT_DoiMatKhau";
-            this.pbTT_DoiMatKhau.Size = new System.Drawing.Size(46, 33);
-            this.pbTT_DoiMatKhau.TabIndex = 5;
-            this.pbTT_DoiMatKhau.TabStop = false;
-            this.pbTT_DoiMatKhau.Click += new System.EventHandler(this.btnTT_DoiMatKhau_Click);
-            // 
-            // pbTT_DangNhap
-            // 
-            this.pbTT_DangNhap.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_DangNhap.Image")));
-            this.pbTT_DangNhap.Location = new System.Drawing.Point(608, 50);
-            this.pbTT_DangNhap.Name = "pbTT_DangNhap";
-            this.pbTT_DangNhap.Size = new System.Drawing.Size(53, 33);
-            this.pbTT_DangNhap.TabIndex = 4;
-            this.pbTT_DangNhap.TabStop = false;
-            this.pbTT_DangNhap.Click += new System.EventHandler(this.btnTT_DangNhap_Click);
-            // 
-            // btnTT_DoiMatKhau
-            // 
-            this.btnTT_DoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTT_DoiMatKhau.Location = new System.Drawing.Point(675, 89);
-            this.btnTT_DoiMatKhau.Name = "btnTT_DoiMatKhau";
-            this.btnTT_DoiMatKhau.Size = new System.Drawing.Size(93, 33);
-            this.btnTT_DoiMatKhau.TabIndex = 3;
-            this.btnTT_DoiMatKhau.Text = "Đổi mật khẩu";
-            this.btnTT_DoiMatKhau.UseVisualStyleBackColor = true;
-            this.btnTT_DoiMatKhau.Click += new System.EventHandler(this.btnTT_DoiMatKhau_Click);
             // 
             // tabControl_Chung
             // 
@@ -212,23 +134,23 @@
             this.tabControl_Chung.Controls.Add(this.tpHDSuDung);
             this.tabControl_Chung.Controls.Add(this.tpHDCaiDat);
             this.tabControl_Chung.Controls.Add(this.tpLienHe);
+            this.tabControl_Chung.Enabled = false;
             this.tabControl_Chung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl_Chung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl_Chung.Location = new System.Drawing.Point(2, 5);
             this.tabControl_Chung.Name = "tabControl_Chung";
             this.tabControl_Chung.SelectedIndex = 0;
-            this.tabControl_Chung.Size = new System.Drawing.Size(882, 562);
+            this.tabControl_Chung.Size = new System.Drawing.Size(882, 489);
             this.tabControl_Chung.TabIndex = 5;
             // 
             // tpTrangChu
             // 
             this.tpTrangChu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tpTrangChu.Controls.Add(this.groupBox1);
-            this.tpTrangChu.Controls.Add(this.panel1);
             this.tpTrangChu.Location = new System.Drawing.Point(4, 25);
             this.tpTrangChu.Name = "tpTrangChu";
             this.tpTrangChu.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTrangChu.Size = new System.Drawing.Size(874, 533);
+            this.tpTrangChu.Size = new System.Drawing.Size(874, 460);
             this.tpTrangChu.TabIndex = 0;
             this.tpTrangChu.Text = "Trang chủ";
             // 
@@ -981,12 +903,76 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Copyright by NHOM 4-THUC TAP NHOM  2017";
             // 
+            // pbTT_Thoat
+            // 
+            this.pbTT_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_Thoat.Image")));
+            this.pbTT_Thoat.Location = new System.Drawing.Point(809, 496);
+            this.pbTT_Thoat.Name = "pbTT_Thoat";
+            this.pbTT_Thoat.Size = new System.Drawing.Size(40, 33);
+            this.pbTT_Thoat.TabIndex = 14;
+            this.pbTT_Thoat.TabStop = false;
+            // 
+            // pbTT_DoiMatKhau
+            // 
+            this.pbTT_DoiMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_DoiMatKhau.Image")));
+            this.pbTT_DoiMatKhau.Location = new System.Drawing.Point(710, 496);
+            this.pbTT_DoiMatKhau.Name = "pbTT_DoiMatKhau";
+            this.pbTT_DoiMatKhau.Size = new System.Drawing.Size(46, 33);
+            this.pbTT_DoiMatKhau.TabIndex = 13;
+            this.pbTT_DoiMatKhau.TabStop = false;
+            // 
+            // pbTT_DangNhap
+            // 
+            this.pbTT_DangNhap.Image = ((System.Drawing.Image)(resources.GetObject("pbTT_DangNhap.Image")));
+            this.pbTT_DangNhap.Location = new System.Drawing.Point(623, 496);
+            this.pbTT_DangNhap.Name = "pbTT_DangNhap";
+            this.pbTT_DangNhap.Size = new System.Drawing.Size(53, 33);
+            this.pbTT_DangNhap.TabIndex = 12;
+            this.pbTT_DangNhap.TabStop = false;
+            // 
+            // btnTT_DoiMatKhau
+            // 
+            this.btnTT_DoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTT_DoiMatKhau.Location = new System.Drawing.Point(690, 535);
+            this.btnTT_DoiMatKhau.Name = "btnTT_DoiMatKhau";
+            this.btnTT_DoiMatKhau.Size = new System.Drawing.Size(93, 33);
+            this.btnTT_DoiMatKhau.TabIndex = 11;
+            this.btnTT_DoiMatKhau.Text = "Đổi mật khẩu";
+            this.btnTT_DoiMatKhau.UseVisualStyleBackColor = true;
+            // 
+            // btnTT_Thoat
+            // 
+            this.btnTT_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTT_Thoat.Location = new System.Drawing.Point(782, 535);
+            this.btnTT_Thoat.Name = "btnTT_Thoat";
+            this.btnTT_Thoat.Size = new System.Drawing.Size(95, 33);
+            this.btnTT_Thoat.TabIndex = 10;
+            this.btnTT_Thoat.Text = "Thoát";
+            this.btnTT_Thoat.UseVisualStyleBackColor = true;
+            // 
+            // btnTT_DangNhap
+            // 
+            this.btnTT_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTT_DangNhap.Location = new System.Drawing.Point(598, 535);
+            this.btnTT_DangNhap.Name = "btnTT_DangNhap";
+            this.btnTT_DangNhap.Size = new System.Drawing.Size(93, 33);
+            this.btnTT_DangNhap.TabIndex = 9;
+            this.btnTT_DangNhap.Text = "Đăng nhập";
+            this.btnTT_DangNhap.UseVisualStyleBackColor = true;
+            this.btnTT_DangNhap.Click += new System.EventHandler(this.btnTT_DangNhap_Click_1);
+            // 
             // QLNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(884, 610);
+            this.Controls.Add(this.pbTT_Thoat);
+            this.Controls.Add(this.pbTT_DoiMatKhau);
+            this.Controls.Add(this.pbTT_DangNhap);
+            this.Controls.Add(this.btnTT_DoiMatKhau);
+            this.Controls.Add(this.btnTT_Thoat);
+            this.Controls.Add(this.btnTT_DangNhap);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tabControl_Chung);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -997,10 +983,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ NHÂN SỰ";
             this.Load += new System.EventHandler(this.QLNS_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_Thoat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DoiMatKhau)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DangNhap)).EndInit();
             this.tabControl_Chung.ResumeLayout(false);
             this.tpTrangChu.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1017,14 +999,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_Thoat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DoiMatKhau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTT_DangNhap)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnTT_DangNhap;
-        private System.Windows.Forms.Button btnTT_Thoat;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl_Chung;
         private System.Windows.Forms.TabPage tpTrangChu;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1038,7 +1020,6 @@
         private System.Windows.Forms.TabPage tpHDSuDung;
         private System.Windows.Forms.TabPage tpHDCaiDat;
         private System.Windows.Forms.TabPage tpLienHe;
-        private System.Windows.Forms.Button btnTT_DoiMatKhau;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button button8;
@@ -1051,9 +1032,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pbTT_Thoat;
-        private System.Windows.Forms.PictureBox pbTT_DoiMatKhau;
-        private System.Windows.Forms.PictureBox pbTT_DangNhap;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label4;
@@ -1104,6 +1082,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnMaLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTDHV;
+        private System.Windows.Forms.PictureBox pbTT_Thoat;
+        private System.Windows.Forms.PictureBox pbTT_DoiMatKhau;
+        private System.Windows.Forms.PictureBox pbTT_DangNhap;
+        private System.Windows.Forms.Button btnTT_DoiMatKhau;
+        private System.Windows.Forms.Button btnTT_Thoat;
+        private System.Windows.Forms.Button btnTT_DangNhap;
     }
 }
 

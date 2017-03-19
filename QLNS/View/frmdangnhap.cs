@@ -22,8 +22,8 @@ namespace QLNS.View
         {
             if (username.Equals(txtTenDN.Text) && password.Equals(txtpassword.Text))
             {
-                QLNS fr = new QLNS();
-                fr.ShowDialog();
+                MessageBox.Show("Thành công");
+                this.Close();
             }
             else
             {
