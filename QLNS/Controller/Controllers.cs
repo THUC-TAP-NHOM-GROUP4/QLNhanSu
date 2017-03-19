@@ -76,7 +76,11 @@ namespace QLNS.Controller
 
         public NhanSu[] getListNhanVien()
         {
-            DataTable table = da.Query("Select *from NhanVien");
+            //DataTable table = da.Query("Select *from NhanVien");
+            DataTable table = da.Query("select nv.ma, nv.ten, nv.ngaysinh, nv.gioitinh, nv.diachi,nv.socmnd, nv.dienthoai,  "
+                       + " nv.email, cv.ten as chucvu, pb.ten as phongban, nv.maluong, tdhv.ten as TDHV from NhanVien nv "
+                       + " inner join ChucVu cv on nv.maChucVu = cv.ma inner join PhongBan pb on nv.maphongban = pb.ma "
+                       + " inner join TrinhDoHocVan tdhv on tdhv.ma = nv.maTDHV");
             int n = table.Rows.Count;
             int i;
             if (n == 0) return null;
@@ -102,10 +106,10 @@ namespace QLNS.Controller
             nv.socmnd = row["socmnd"].ToString().Trim();
             nv.dienthoai = row["dienthoai"].ToString().Trim();
             nv.email = row["email"].ToString().Trim();
-            nv.maChucVu = row["maChucVu"].ToString().Trim();
+            nv.maChucVu = row["chucvu"].ToString().Trim();
             nv.maluong = row["maluong"].ToString().Trim();
-            nv.maphongban = row["maphongban"].ToString().Trim();
-            nv.maTDHV = row["maTDHV"].ToString().Trim();
+            nv.maphongban = row["phongban"].ToString().Trim();
+            nv.maTDHV = row["TDHV"].ToString().Trim();
 
             return nv;
         }

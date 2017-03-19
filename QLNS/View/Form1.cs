@@ -48,10 +48,10 @@ namespace QLNS
             dgvNhanSu.Columns["socmnd"].HeaderText = "CMND";
             dgvNhanSu.Columns["dienthoai"].HeaderText = "Điện thoại";
             dgvNhanSu.Columns["email"].HeaderText = "Email";
-            dgvNhanSu.Columns["maChucVu"].HeaderText = "Mã Chức vụ";
-            dgvNhanSu.Columns["maluong"].HeaderText = "Mã lương";
-            dgvNhanSu.Columns["maphongban"].HeaderText = "Mã phòng ban";
-            dgvNhanSu.Columns["maTDHV"].HeaderText = "Mã TDHV";
+            dgvNhanSu.Columns["maChucVu"].HeaderText = "Chức vụ";
+            dgvNhanSu.Columns["maluong"].HeaderText = "Mức Lương";
+            dgvNhanSu.Columns["maphongban"].HeaderText = "Phòng ban";
+            dgvNhanSu.Columns["maTDHV"].HeaderText = "TDHV";
 
             dgvNhanSu.Columns["ma"].Width = 60;
             dgvNhanSu.Columns["ten"].Width = 150;
@@ -59,6 +59,9 @@ namespace QLNS
             dgvNhanSu.Columns["email"].Width = 150;
             dgvNhanSu.Columns["gioitinh"].Width = 70;
             dgvNhanSu.Columns["ngaysinh"].Width = 70;
+            dgvNhanSu.Columns["maChucVu"].Width = 150;
+            dgvNhanSu.Columns["maphongban"].Width = 150;
+
 
         }
 
