@@ -102,6 +102,10 @@ namespace QLNS.Controller
             {
                 nv.gioitinh = gt;
             }
+            DateTime ns = new DateTime();
+            if (DateTime.TryParse(row["ngaysinh"].ToString().Trim(), out ns)){
+                nv.ngaysinh = ns;
+            }
             nv.diachi = row["diachi"].ToString().Trim();
             nv.socmnd = row["socmnd"].ToString().Trim();
             nv.dienthoai = row["dienthoai"].ToString().Trim();

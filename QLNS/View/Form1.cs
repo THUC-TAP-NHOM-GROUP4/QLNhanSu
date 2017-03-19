@@ -57,11 +57,11 @@ namespace QLNS
             dgvNhanSu.Columns["ten"].Width = 150;
             dgvNhanSu.Columns["socmnd"].Width = 100;
             dgvNhanSu.Columns["email"].Width = 150;
-            dgvNhanSu.Columns["gioitinh"].Width = 70;
-            dgvNhanSu.Columns["ngaysinh"].Width = 70;
+            dgvNhanSu.Columns["gioitinh"].Width = 50;
+            dgvNhanSu.Columns["ngaysinh"].Width = 100;
             dgvNhanSu.Columns["maChucVu"].Width = 150;
             dgvNhanSu.Columns["maphongban"].Width = 150;
-
+            dgvNhanSu.Columns["diachi"].Width = 200;
 
         }
 
@@ -82,6 +82,51 @@ namespace QLNS
             frm_Add = new frmAdd(this);
             frm_Add.ShowDialog();
             update_FormMain();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpTrangChu);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpTimKiem);
+        }
+
+        private void btnTT_DangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTT_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lbdanhsach_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpDSNhanVien);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpTimKiem);
+        }
+
+        private void lbhuongdan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpHDSuDung);
+        }
+
+        private void lblLienHe_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpLienHe);
         }
     }
 }
