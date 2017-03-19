@@ -117,6 +117,14 @@ namespace QLNS.Controller
 
             return nv;
         }
+        public void Sua(string ma, string ten, string diachi, DateTime ngaysinh, int gioitinh, string socmnd, string dienthoai, string email, string machucvu, string maluong, string maphongban, string matdhv)
+        {
+            da.NonQuery("Update NhanVien set ten=N'"+ ten + "', diachi =N'"+ diachi
+                + "',ngaysinh='"+ ngaysinh + "', gioitinh='"
+                + gioitinh + "', socmnd='" + socmnd + "', dienthoai='"+ dienthoai + "',email='" + email
+                + "', maChucVu='"+ machucvu + "',maluong='"+ maluong
+                + "',maphongban='"+ maphongban + "',matdhv='"+ matdhv + "' where ma ='"+ ma + "'");
+        }
         public bool Them(NhanSu nv)
         {
 

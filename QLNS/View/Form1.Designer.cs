@@ -415,6 +415,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -453,6 +454,7 @@
             this.dgvNhanSu.Name = "dgvNhanSu";
             this.dgvNhanSu.Size = new System.Drawing.Size(874, 405);
             this.dgvNhanSu.TabIndex = 0;
+            this.dgvNhanSu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanSu_CellContentClick);
             // 
             // tpTimKiem
             // 
