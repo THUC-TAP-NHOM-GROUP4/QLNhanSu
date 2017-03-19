@@ -32,10 +32,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -44,8 +48,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.dgvNhanSu = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -93,28 +105,20 @@
             this.columnChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnMaLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTDHV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanSu)).BeginInit();
@@ -122,10 +126,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -160,6 +160,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(862, 125);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(794, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(695, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 33);
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(608, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 33);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // button3
             // 
@@ -217,6 +244,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHƯƠNG TRÌNH QUẢN LÝ NHÂN SỰ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 167);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // linkLabel3
             // 
@@ -307,6 +344,91 @@
             this.panel2.Size = new System.Drawing.Size(868, 60);
             this.panel2.TabIndex = 1;
             // 
+            // button11
+            // 
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(631, 16);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(80, 40);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Tìm kiếm";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(788, 16);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(80, 40);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Thoát";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(709, 16);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(80, 40);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Lưu";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(552, 16);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(80, 40);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Xóa";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(473, 16);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(80, 40);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Sửa";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(395, 16);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(80, 40);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // button4
+            // 
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button4.Location = new System.Drawing.Point(316, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 40);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Xem";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // dgvNhanSu
             // 
             this.dgvNhanSu.AllowUserToAddRows = false;
@@ -340,6 +462,17 @@
             this.tabPage3.Size = new System.Drawing.Size(874, 533);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Tìm kiếm";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
+            this.label9.Location = new System.Drawing.Point(624, 7);
+            this.label9.MinimumSize = new System.Drawing.Size(30, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 30);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "      ";
             // 
             // label8
             // 
@@ -778,6 +911,17 @@
             this.columnTDHV.HeaderText = "Trình độ HV";
             this.columnTDHV.Name = "columnTDHV";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(99, 7);
+            this.label6.MinimumSize = new System.Drawing.Size(30, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 30);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "      ";
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
@@ -823,150 +967,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Copyright by NHOM 4-THUC TAP NHOM  2017";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 167);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(794, 50);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 33);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(695, 50);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 33);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(608, 50);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 33);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(631, 16);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(80, 40);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Tìm kiếm";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(788, 16);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(80, 40);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Thoát";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(709, 16);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 40);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Lưu";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(552, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(80, 40);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Xóa";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(473, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 40);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Sửa";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(395, 16);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(80, 40);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button4.Location = new System.Drawing.Point(316, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 40);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Xem";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
-            this.label9.Location = new System.Drawing.Point(624, 7);
-            this.label9.MinimumSize = new System.Drawing.Size(30, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 30);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "      ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.Location = new System.Drawing.Point(99, 7);
-            this.label6.MinimumSize = new System.Drawing.Size(30, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 30);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "      ";
-            // 
             // QLNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -977,15 +977,21 @@
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(900, 649);
+            this.MinimumSize = new System.Drawing.Size(900, 649);
             this.Name = "QLNS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ NHÂN SỰ";
             this.Load += new System.EventHandler(this.QLNS_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -997,10 +1003,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

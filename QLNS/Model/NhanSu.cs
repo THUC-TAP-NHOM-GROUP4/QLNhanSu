@@ -11,7 +11,7 @@ namespace QLNS.Model
         public String ma { get; set; }
         public string ten { get; set; }
         public DateTime ngaysinh { get; set; }
-        public bool gioitinh { get; set; }
+        public int gioitinh { get; set; }
         public string diachi { get; set; }
         public string socmnd { get; set; }
         public string dienthoai { get; set; }

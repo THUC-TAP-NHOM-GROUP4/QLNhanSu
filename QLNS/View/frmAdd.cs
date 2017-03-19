@@ -30,8 +30,8 @@ namespace QLNS
                 NhanSu nv = new NhanSu();
                 nv.ten = txtten.Text.ToString().Trim();
                 nv.ngaysinh = DateTime.Parse(dtpngaysinh.Value.ToShortDateString());
-                if (rdbnam.Checked) nv.gioitinh = true;
-                else nv.gioitinh = false;
+                if (rdbnam.Checked) nv.gioitinh = 1;
+                else nv.gioitinh = 0;
                 nv.diachi = txtdiachi.Text.ToString().Trim();
                 nv.socmnd = txtsocmnd.Text.ToString().Trim();
                 nv.dienthoai = txtdienthoai.Text.ToString().Trim();
@@ -45,12 +45,11 @@ namespace QLNS
                 {
                     this.Close();
                     this.form1.Visible = true;
-                    this.form1.();
                 }
                 
             }
         }    
-
+        
         private void frmAdd_Load(object sender, EventArgs e)
         {
             cbbmachucvu.DataSource = control.getListDataChucVu();
@@ -60,13 +59,30 @@ namespace QLNS
         }
         private bool checkAdd()
         {
-            if (txtten.Text.Trim().Equals("") || txtdiachi.Text.Trim().Equals("")
-                || txtsocmnd.Text.Trim().Equals("") || txtdienthoai.Text.Trim().Equals(""))
+            if (txtten.Text.Trim().Equals(""))
             {
                 erpTxtTen.SetError(txtten, "Phải nhập Họ tên ");
                 return false;
             }
-
+            erpTxtTen.Clear();
+            if (txtdiachi.Text.Trim().Equals(""))
+            {
+                erpTxtDiaChi.SetError(txtdiachi, "Phải nhập địa chỉ");
+                return false;
+            }
+            erpTxtDiaChi.Clear();
+            if (txtsocmnd.Text.Trim().Equals(""))
+            {
+                erpSocmnd.SetError(txtsocmnd, "Phải nhập số CMND");
+                return false;
+            }
+            erpSocmnd.Clear();
+            if (txtdienthoai.Text.Trim().Equals(""))
+            {
+                erpDienThoai.SetError(txtdienthoai, "Phải nhập số điện thoại");
+                return false;
+            }
+            erpDienThoai.Clear();
             return true;
         }
         private void btnThoat_Click(object sender, EventArgs e)

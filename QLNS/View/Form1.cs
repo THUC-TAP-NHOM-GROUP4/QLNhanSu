@@ -14,16 +14,16 @@ namespace QLNS
     public partial class QLNS : Form
     {
         Controllers control = new Controllers();
-        frmAdd add;
+        frmAdd frm_Add;
         public QLNS()
         {
             InitializeComponent();
 
             ImageList imageList1 = new ImageList();
-            imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\19.png"));
-            imageList1.Images.Add("key2", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\20.png"));
-            imageList1.Images.Add("key3", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\1.png"));
-            imageList1.Images.Add("key4", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\huong\QLNhanSu\QLNS\Resources\16.png"));
+            imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\19.png"));
+            imageList1.Images.Add("key2", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\20.png"));
+            imageList1.Images.Add("key3", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\1.png"));
+            imageList1.Images.Add("key4", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\16.png"));
         
             ////initialize the tab control
             //TabControl tabControl1 = new TabControl();
@@ -33,7 +33,10 @@ namespace QLNS
             //tabControl1.TabPages.Add("tabKey2", "TabText2", 1);      // icon using ImageIndex
             //this.Controls.Add(tabControl1);
         }
-
+        public void update_FormMain()
+        {
+            dgvNhanSu.DataSource = control.getListNhanVien();
+        }
         private void QLNS_Load(object sender, EventArgs e)
         {
             dgvNhanSu.DataSource = control.getListNhanVien();
@@ -73,8 +76,9 @@ namespace QLNS
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            add = new frmAdd(this);
-            add.ShowDialog();
+            frm_Add = new frmAdd(this);
+            frm_Add.ShowDialog();
+            update_FormMain();
         }
     }
 }

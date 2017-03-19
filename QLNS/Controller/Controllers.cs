@@ -84,6 +84,7 @@ namespace QLNS.Controller
             for (i = 0; i < n; i++)
             {
                 list[i] = getNhanVien(table.Rows[i]);
+                //list[i].gioitinh = (bool)table.Rows[0]["gioitinh"];
             }
             return list;
         }
@@ -92,12 +93,11 @@ namespace QLNS.Controller
             NhanSu nv = new NhanSu();
             nv.ma = row["ma"].ToString().Trim();
             nv.ten = row["ten"].ToString().Trim();
-            DateTime ngaysinh;
-            if (DateTime.TryParse(row["ngaysinh"].ToString(), out ngaysinh))
+            int gt = 1;
+            if (int.TryParse(row["gioitinh"].ToString().Trim(), out gt))
             {
-                nv.ngaysinh = ngaysinh;
+                nv.gioitinh = gt;
             }
-            nv.gioitinh = true;
             nv.diachi = row["diachi"].ToString().Trim();
             nv.socmnd = row["socmnd"].ToString().Trim();
             nv.dienthoai = row["dienthoai"].ToString().Trim();

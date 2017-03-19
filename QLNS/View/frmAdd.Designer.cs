@@ -391,7 +391,7 @@
             this.MinimumSize = new System.Drawing.Size(420, 550);
             this.Name = "frmAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmAdd";
+            this.Text = "THÊM NHÂN VIÊN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAdd_FormClosed);
             this.Load += new System.EventHandler(this.frmAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.erpTxtTen)).EndInit();
