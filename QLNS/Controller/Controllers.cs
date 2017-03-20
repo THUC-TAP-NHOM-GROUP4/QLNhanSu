@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLNS.Controller;
+using QLNS.View;
 
 namespace QLNS.Controller
 {
@@ -124,6 +126,11 @@ namespace QLNS.Controller
                 + gioitinh + "', socmnd='" + socmnd + "', dienthoai='"+ dienthoai + "',email='" + email
                 + "', maChucVu='"+ machucvu + "',maluong='"+ maluong
                 + "',maphongban='"+ maphongban + "',matdhv='"+ matdhv + "' where ma ='"+ ma + "'");
+        }
+
+        public void Xoa(string txtma)
+        {
+            da.NonQuery("Delete from NhanVien where ma = '" + txtma + "' ");
         }
         public bool Them(NhanSu nv)
         {
