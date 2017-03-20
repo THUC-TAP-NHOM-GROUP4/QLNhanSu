@@ -97,7 +97,7 @@ namespace QLNS
 
         private void btnTT_DangNhap_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnTT_DoiMatKhau_Click(object sender, EventArgs e)
@@ -154,6 +154,11 @@ namespace QLNS
         private void dgvNhanSu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void lblTroGiup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl_Chung.SelectTab(tpHDSuDung);
         }
     }
 }

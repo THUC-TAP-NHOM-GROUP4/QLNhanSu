@@ -41,7 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLienHe = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.lblTroGiup = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lbhuongdan = new System.Windows.Forms.LinkLabel();
             this.lbdanhsach = new System.Windows.Forms.LinkLabel();
@@ -237,7 +237,7 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblLienHe);
-            this.groupBox1.Controls.Add(this.linkLabel2);
+            this.groupBox1.Controls.Add(this.lblTroGiup);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.lbhuongdan);
             this.groupBox1.Controls.Add(this.lbdanhsach);
@@ -272,15 +272,16 @@
             this.lblLienHe.Text = "Thông tin liên hệ";
             this.lblLienHe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLienHe_LinkClicked);
             // 
-            // linkLabel2
+            // lblTroGiup
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(227, 117);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(66, 16);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Trợ giúp";
+            this.lblTroGiup.AutoSize = true;
+            this.lblTroGiup.Location = new System.Drawing.Point(227, 117);
+            this.lblTroGiup.Name = "lblTroGiup";
+            this.lblTroGiup.Size = new System.Drawing.Size(66, 16);
+            this.lblTroGiup.TabIndex = 4;
+            this.lblTroGiup.TabStop = true;
+            this.lblTroGiup.Text = "Trợ giúp";
+            this.lblTroGiup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblTroGiup_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -1029,7 +1030,7 @@
         private System.Windows.Forms.TabPage tpTrangChu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel lblLienHe;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel lblTroGiup;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lbhuongdan;
         private System.Windows.Forms.LinkLabel lbdanhsach;
