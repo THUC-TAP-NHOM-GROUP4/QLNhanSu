@@ -35,5 +35,16 @@ namespace QLNS
         {
 
         }
+
+        private void tvStile_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            TreeNode nName = e.Node;
+            string webPage = "";
+            webPage = (string)nName.Tag;
+            if (webPage != "")
+            {
+                wbStile.Navigate(webPage);
+            }
+        }
     }
 }
