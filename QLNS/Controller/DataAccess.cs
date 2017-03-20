@@ -10,7 +10,7 @@ namespace QLNS.Controller
 {
     class DataAccess
     {
-        static string constr = @"Data Source=DESKTOP-DCH69I1\SQLEXPRESS;Initial Catalog=TTN_QLNS;Integrated Security=True";
+        static string constr = @"Data Source=ADMINISTRATOR;Initial Catalog=TTN_QLNS;Integrated Security=True";
         private static SqlConnection con = new SqlConnection(constr);
         public DataTable Query(string sql, params SqlParameter[] pr)
         {

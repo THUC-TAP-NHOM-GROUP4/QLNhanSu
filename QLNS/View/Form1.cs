@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLNS.Controller;
+using QLNS.Model;
 
 namespace QLNS
 {
@@ -161,6 +163,47 @@ namespace QLNS
             frmdangnhap fr = new frmdangnhap();
             fr.ShowDialog();
             tabControl_Chung.Enabled = true;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        NhanSu nv = new NhanSu();
+      
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                control.Xoa(nv.ma);
+              //  nv.ma = txtMaOrTen.Text;
+                MessageBox.Show("Đã Xóa Thành Công!");
+                dgvNhanSu.DataSource = da.Query("select *from NhanVien");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Không Thể Xóa");
+            }
+        }
+
+        private void tpHDSuDung_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tvStile_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            TreeNode nName = e.Node;
+            string webPage = "";
+            webPage = (string)nName.Tag;
+            if (webPage != "")
+            {
+                wbStile.Navigate(webPage);
+            }
         }
     }
 }
