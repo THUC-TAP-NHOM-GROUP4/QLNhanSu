@@ -134,6 +134,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "frmdangnhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmdangnhap";
             this.ResumeLayout(false);
             this.PerformLayout();

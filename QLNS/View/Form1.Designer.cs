@@ -204,8 +204,7 @@
             this.lblLienHe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLienHe_LinkClicked);
             // 
             // lblTroGiup
-            // 
-<<<<<<< HEAD
+            
             this.lblTroGiup.AutoSize = true;
             this.lblTroGiup.Location = new System.Drawing.Point(227, 117);
             this.lblTroGiup.Name = "lblTroGiup";
@@ -214,16 +213,7 @@
             this.lblTroGiup.TabStop = true;
             this.lblTroGiup.Text = "Trợ giúp";
             this.lblTroGiup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblTroGiup_LinkClicked);
-=======
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(227, 117);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(61, 16);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Trợ giúp";
->>>>>>> f12a855a04ed9aa221ec196b097440b791c370d2
-            // 
+            
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
