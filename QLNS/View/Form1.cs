@@ -128,7 +128,9 @@ namespace QLNS
 
         private void btnTT_DangNhap_Click(object sender, EventArgs e)
         {
-            
+            frmdangnhap fr = new frmdangnhap();
+            fr.ShowDialog();
+            tabControl_Chung.Enabled = true;
         }
 
         private void btnTT_DoiMatKhau_Click(object sender, EventArgs e)
@@ -194,9 +196,7 @@ namespace QLNS
       
         private void btnTT_DangNhap_Click_1(object sender, EventArgs e)
         {
-            frmdangnhap fr = new frmdangnhap();
-            fr.ShowDialog();
-            tabControl_Chung.Enabled = true;
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -328,6 +328,36 @@ namespace QLNS
             {
 
             }
+        }
+
+        private void btnTT_DangNhap_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbTT_DangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbTT_DoiMatKhau_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTT_DoiMatKhau_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbTT_Thoat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTT_Thoat_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
