@@ -94,6 +94,74 @@ namespace QLNS.Controller
             }
             return list;
         }
+        public NhanSu[] getListNhanVienPB(string str)
+        {
+            DataTable table = da.Query("select *from NhanVien where maphongban=(select ma from PhongBan where ten=N'" + str + "')");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+            NhanSu[] list = new NhanSu[n];
+            for (i = 0; i < n; i++)
+            {
+                list[i] = getNhanVienTK(table.Rows[i]);
+
+            }
+            return list;
+        }
+        public NhanSu[] getListNhanVienTen(string str)
+        {
+            DataTable table = da.Query("select *from NhanVien where ten like '" + str + "%'");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+            NhanSu[] list = new NhanSu[n];
+            for (i = 0; i < n; i++)
+            {
+                list[i] = getNhanVienTK(table.Rows[i]);
+
+            }
+            return list;
+        }
+        public NhanSu[] getListNhanVienMa(string str)
+        {
+            DataTable table = da.Query("select *from NhanVien where ma like'" + str + "%'");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+            NhanSu[] list = new NhanSu[n];
+            for (i = 0; i < n; i++)
+            {
+                list[i] = getNhanVienTK(table.Rows[i]);
+
+            }
+            return list;
+        }
+        public NhanSu getNhanVienTK(DataRow row)
+        {
+            NhanSu nv = new NhanSu();
+            nv.ma = row["ma"].ToString().Trim();
+            nv.ten = row["ten"].ToString().Trim();
+            int gt = 1;
+            if (int.TryParse(row["gioitinh"].ToString().Trim(), out gt))
+            {
+                nv.gioitinh = gt;
+            }
+            DateTime ns = new DateTime();
+            if (DateTime.TryParse(row["ngaysinh"].ToString().Trim(), out ns))
+            {
+                nv.ngaysinh = ns;
+            }
+            nv.diachi = row["diachi"].ToString().Trim();
+            nv.socmnd = row["socmnd"].ToString().Trim();
+            nv.dienthoai = row["dienthoai"].ToString().Trim();
+            nv.email = row["email"].ToString().Trim();
+            nv.maChucVu = row["machucvu"].ToString().Trim();
+            nv.maluong = row["maluong"].ToString().Trim();
+            nv.maphongban = row["maphongban"].ToString().Trim();
+            nv.maTDHV = row["maTDHV"].ToString().Trim();
+
+            return nv;
+        }
         public NhanSu getNhanVien(DataRow row)
         {
             NhanSu nv = new NhanSu();

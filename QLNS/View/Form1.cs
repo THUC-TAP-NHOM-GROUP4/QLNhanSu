@@ -66,6 +66,35 @@ namespace QLNS
             dgvNhanSu.Columns["maphongban"].Width = 150;
             dgvNhanSu.Columns["diachi"].Width = 200;
 
+            dtgDSNV.DataSource = control.getListNhanVien();
+            LoadDtgDSNV();
+
+        }
+        private void LoadDtgDSNV()
+        {
+            //dtgDSNV
+
+
+            dtgDSNV.Columns["ma"].HeaderText = "Mã";
+            dtgDSNV.Columns["ten"].HeaderText = "Họ và Tên";
+            dtgDSNV.Columns["ngaysinh"].HeaderText = "Ngày Sinh";
+            dtgDSNV.Columns["gioitinh"].HeaderText = "Giới Tính";
+            dtgDSNV.Columns["diachi"].HeaderText = "Địa Chỉ";
+            dtgDSNV.Columns["socmnd"].HeaderText = "Số CMND";
+            dtgDSNV.Columns["dienthoai"].HeaderText = "Điện Thoại";
+            dtgDSNV.Columns["email"].HeaderText = "Email";
+            dtgDSNV.Columns["maChucVu"].HeaderText = "Chức Vụ";
+            dtgDSNV.Columns["maluong"].HeaderText = "Lương";
+            dtgDSNV.Columns["maphongban"].HeaderText = "Phòng Ban";
+            dtgDSNV.Columns["maTDHV"].HeaderText = "TDHV";
+
+            dtgDSNV.Columns["ma"].Width = 60;
+            dtgDSNV.Columns["ten"].Width = 150;
+            dtgDSNV.Columns["socmnd"].Width = 100;
+            dtgDSNV.Columns["email"].Width = 150;
+            dtgDSNV.Columns["gioitinh"].Width = 70;
+            dtgDSNV.Columns["ngaysinh"].Width = 70;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -176,9 +205,8 @@ namespace QLNS
         {
             try
             {
-               
+
                 control.Xoa(nv.ma);
-              //  nv.ma = txtMaOrTen.Text;
                 MessageBox.Show("Đã Xóa Thành Công!");
                 dgvNhanSu.DataSource = da.Query("select *from NhanVien");
 
@@ -204,6 +232,92 @@ namespace QLNS
             {
                 wbStile.Navigate(webPage);
             }
+        }
+
+   
+
+        private void pbTT_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+            dtgDSNV.Refresh();
+
+            string str = cbbPhongBan.SelectedItem.ToString();
+            dtgDSNV.DataSource = control.getListNhanVienPB(str);
+            LoadDtgDSNV();
+        }
+
+        private void txtMaNV_TextChanged(object sender, EventArgs e)
+        {
+           
+            dtgDSNV.DataSource = control.getListNhanVienMa(txtMaNV.Text);
+            LoadDtgDSNV();
+        }
+
+        private void txtTenNV_TextChanged(object sender, EventArgs e)
+        {
+           
+            dtgDSNV.DataSource = control.getListNhanVienTen(txtTenNV.Text);
+            LoadDtgDSNV();
+        }
+
+        private void chBChon_CheckedChanged(object sender, EventArgs e)
+        {
+            cbbPhongBan.Enabled = true;
+
+        }
+
+        private void dtgDSNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow row = new DataGridViewRow();
+            row = dtgDSNV.Rows[e.RowIndex];
+            try
+            {
+
+                txtMa.Text = row.Cells[0].Value.ToString();
+                txtTen.Text = row.Cells[1].Value.ToString();
+
+                txtDC.Text = row.Cells[4].Value.ToString();
+                txCMND.Text = row.Cells[5].Value.ToString();
+                txtDienThoai.Text = row.Cells[6].Value.ToString();
+                txtEmail.Text = row.Cells[7].Value.ToString();
+                txtLuong.Text = row.Cells[9].Value.ToString();
+                txtChucVu.Text = row.Cells[8].Value.ToString();
+                txtPhongBan.Text = row.Cells[10].Value.ToString();
+                txtTrinhDo.Text = row.Cells[11].Value.ToString();
+
+                dtpNgaySinh.Text = row.Cells[2].Value.ToString();
+                if (row.Cells[3].Value.ToString() == "0")
+
+                    rdbNu.Checked = true;
+
+                else
+                    rdbNam.Checked = true;
+
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void txtMaNV_Click(object sender, EventArgs e)
+        {
+            chBChon.Enabled = false;
+            cbbPhongBan.Enabled = false;
+        }
+
+        private void txtTenNV_Click(object sender, EventArgs e)
+        {
+            chBChon.Enabled = false;
+            txtTenNV.Enabled = false;
         }
     }
 }
