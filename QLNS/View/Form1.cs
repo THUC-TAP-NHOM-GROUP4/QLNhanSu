@@ -274,6 +274,23 @@ namespace QLNS
         private void dtgDSNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtMaNV_Click(object sender, EventArgs e)
+        {
+            chBChon.Enabled = false;
+            cbbPhongBan.Enabled = false;
+        }
+
+        private void txtTenNV_Click(object sender, EventArgs e)
+        {
+            chBChon.Enabled = false;
+            txtTenNV.Enabled = false;
+        }
+
+        private void dtgDSNV_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
             DataGridViewRow row = new DataGridViewRow();
             row = dtgDSNV.Rows[e.RowIndex];
             try
@@ -306,18 +323,6 @@ namespace QLNS
             {
 
             }
-        }
-
-        private void txtMaNV_Click(object sender, EventArgs e)
-        {
-            chBChon.Enabled = false;
-            cbbPhongBan.Enabled = false;
-        }
-
-        private void txtTenNV_Click(object sender, EventArgs e)
-        {
-            chBChon.Enabled = false;
-            txtTenNV.Enabled = false;
         }
     }
 }
