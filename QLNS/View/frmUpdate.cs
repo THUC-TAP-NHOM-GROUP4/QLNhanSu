@@ -29,10 +29,10 @@ namespace QLNS.View
             string[] str1 = str.Split('_');
             txtma.Text = str1[0];
             txtten.Text = str1[1];
-            if (str[4].ToString() == "1")
+            if (str[2].ToString() == "1")
                 rdbnam.Checked = true;
             else rbdnu.Checked = true;
-            txtdiachi.Text = str1[2];
+            txtdiachi.Text = str1[4];
             txtsocmnd.Text = str1[5];
             txtdienthoai.Text = str1[6];
             txtemali.Text = str1[7];
@@ -40,10 +40,10 @@ namespace QLNS.View
             cbbmaluong.Text = str1[9];
             cbbmaphongban.Text = str1[10];
             cbbmatdhv.Text = str1[11];
-            cbbmachucvu.DataSource = control.getListDataChucVu();
-            cbbmaluong.DataSource = control.getListDataLuong();
-            cbbmatdhv.DataSource = control.getListDataTDHV();
-            cbbmaphongban.DataSource = control.getListDataPhongBan();
+            cbbmachucvu.DataSource = control.Convert(da.Query("select ma from ChucVu"));
+            cbbmaluong.DataSource = control.Convert(da.Query("select ma from Luong"));
+            cbbmatdhv.DataSource = control.Convert(da.Query("select ma from TrinhDoHocVan"));
+            cbbmaphongban.DataSource = control.Convert(da.Query("select ma from PhongBan"));
         }
         DataAccess da = new DataAccess();
         NhanSu nv = new NhanSu();
