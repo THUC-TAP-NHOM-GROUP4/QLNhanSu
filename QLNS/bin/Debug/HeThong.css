@@ -26,16 +26,6 @@ body{
 }
 
 
-#head-link2{
-	height : 10%;
-	border : 1px solid #CDCDCD;
-	clear : both;
-	border : 1px solid #004C00;
-
-	
-}
-
-
 #content{
 	width : 80%;
 	height : 20%;
@@ -108,4 +98,30 @@ body{
 #menu ul li:hover .sub-menu
 {
 	display : block;
+}
+
+
+@media screen and (min-width : 600px )
+{
+	#main{
+		max-width : 100%;
+		margin : 0 auto;
+	
+	}
+	
+	#head{
+		max-width : 100%;
+		margin : 0 auto;
+	    display : inline-table;
+
+	}
+	
+	
+    #footer	{
+		max-width : 100%;
+		margin : 0 auto;
+	    display : inline-table;
+
+	}
+}
 }

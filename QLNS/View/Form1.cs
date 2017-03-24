@@ -232,7 +232,7 @@ namespace QLNS
         {
             TreeNode nName = e.Node;
             string webPage = "";
-            webPage = (string)nName.Tag;
+            webPage = $"{Application.StartupPath}\\HeThong.html";
             if (webPage != "")
             {
                 wbStile.Navigate(webPage);
