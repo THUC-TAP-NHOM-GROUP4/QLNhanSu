@@ -1,3 +1,0 @@
-﻿-Nhấp chuột vào biểu tượng tìm kiếm trên màn hình,
- nhập tên người cần tìm kiếm vào ô trống rồi bấm tìm
-- Kết quả hiển thị là người cần tìm

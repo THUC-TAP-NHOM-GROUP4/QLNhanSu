@@ -1,1 +1,0 @@
-﻿-Tắt chương trình đang chạy và đóng các cửa sổ

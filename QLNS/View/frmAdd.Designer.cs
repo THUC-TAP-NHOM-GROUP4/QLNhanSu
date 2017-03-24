@@ -198,18 +198,18 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(33, 404);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 13);
+            this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 38;
-            this.label13.Text = "Mã TDHV";
+            this.label13.Text = "TDHV";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(33, 369);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 13);
+            this.label12.Size = new System.Drawing.Size(59, 13);
             this.label12.TabIndex = 36;
-            this.label12.Text = "Mã phòng ban";
+            this.label12.Text = "Phòng ban";
             // 
             // txtmaluong
             // 
@@ -225,9 +225,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(33, 299);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 33;
-            this.label10.Text = "Mã chức vụ";
+            this.label10.Text = "Chức vụ";
             // 
             // label8
             // 

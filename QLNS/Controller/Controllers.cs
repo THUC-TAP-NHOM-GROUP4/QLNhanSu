@@ -234,6 +234,14 @@ namespace QLNS.Controller
             if (n == 0) return "";
             else return table.Rows[0]["ma"].ToString().Trim();
         }
+        public List<object> Convert(DataTable dt)
+        {
+            List<Object> lst = new List<object>();
+            foreach (DataRow dr in dt.Rows)
+                foreach (DataColumn dc in dt.Columns)
+                    lst.Add(dr[dc]);
+            return lst;
+        }
     }
 }
 
