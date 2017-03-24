@@ -102,7 +102,6 @@
             this.wbStile = new System.Windows.Forms.WebBrowser();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tvStile = new System.Windows.Forms.TreeView();
-            this.tpHDCaiDat = new System.Windows.Forms.TabPage();
             this.tpLienHe = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -131,7 +130,6 @@
             this.tabControl_Chung.Controls.Add(this.tpDSNhanVien);
             this.tabControl_Chung.Controls.Add(this.tpTimKiem);
             this.tabControl_Chung.Controls.Add(this.tpHDSuDung);
-            this.tabControl_Chung.Controls.Add(this.tpHDCaiDat);
             this.tabControl_Chung.Controls.Add(this.tpLienHe);
             this.tabControl_Chung.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl_Chung.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -255,7 +253,7 @@
             this.lblLienHe.AutoSize = true;
             this.lblLienHe.Location = new System.Drawing.Point(227, 190);
             this.lblLienHe.Name = "lblLienHe";
-            this.lblLienHe.Size = new System.Drawing.Size(116, 16);
+            this.lblLienHe.Size = new System.Drawing.Size(114, 16);
             this.lblLienHe.TabIndex = 5;
             this.lblLienHe.TabStop = true;
             this.lblLienHe.Text = "Thông tin liên hệ";
@@ -277,7 +275,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(227, 83);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(67, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(66, 16);
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Tìm kiếm";
@@ -288,7 +286,7 @@
             this.lbhuongdan.AutoSize = true;
             this.lbhuongdan.Location = new System.Drawing.Point(227, 155);
             this.lbhuongdan.Name = "lbhuongdan";
-            this.lbhuongdan.Size = new System.Drawing.Size(134, 16);
+            this.lbhuongdan.Size = new System.Drawing.Size(137, 16);
             this.lbhuongdan.TabIndex = 1;
             this.lbhuongdan.TabStop = true;
             this.lbhuongdan.Text = "Hướng dẫn sử dụng";
@@ -299,7 +297,7 @@
             this.lbdanhsach.AutoSize = true;
             this.lbdanhsach.Location = new System.Drawing.Point(227, 56);
             this.lbdanhsach.Name = "lbdanhsach";
-            this.lbdanhsach.Size = new System.Drawing.Size(141, 16);
+            this.lbdanhsach.Size = new System.Drawing.Size(139, 16);
             this.lbdanhsach.TabIndex = 0;
             this.lbdanhsach.TabStop = true;
             this.lbdanhsach.Text = "Danh sách nhân viên";
@@ -444,7 +442,7 @@
             this.dgvNhanSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanSu.Location = new System.Drawing.Point(0, 46);
             this.dgvNhanSu.Name = "dgvNhanSu";
-            this.dgvNhanSu.Size = new System.Drawing.Size(878, 441);
+            this.dgvNhanSu.Size = new System.Drawing.Size(874, 441);
             this.dgvNhanSu.TabIndex = 0;
             this.dgvNhanSu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanSu_CellContentClick);
             // 
@@ -941,15 +939,6 @@
             this.tvStile.TabIndex = 0;
             this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick);
             // 
-            // tpHDCaiDat
-            // 
-            this.tpHDCaiDat.Location = new System.Drawing.Point(4, 25);
-            this.tpHDCaiDat.Name = "tpHDCaiDat";
-            this.tpHDCaiDat.Size = new System.Drawing.Size(874, 538);
-            this.tpHDCaiDat.TabIndex = 4;
-            this.tpHDCaiDat.Text = "Hướng dẫn cài đặt";
-            this.tpHDCaiDat.UseVisualStyleBackColor = true;
-            // 
             // tpLienHe
             // 
             this.tpLienHe.Location = new System.Drawing.Point(4, 25);
@@ -1031,7 +1020,6 @@
         private System.Windows.Forms.TabPage tpDSNhanVien;
         private System.Windows.Forms.TabPage tpTimKiem;
         private System.Windows.Forms.TabPage tpHDSuDung;
-        private System.Windows.Forms.TabPage tpHDCaiDat;
         private System.Windows.Forms.TabPage tpLienHe;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThoat;
