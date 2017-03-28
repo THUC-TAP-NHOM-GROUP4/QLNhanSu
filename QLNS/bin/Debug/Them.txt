@@ -1,0 +1,4 @@
+﻿- Nhập thông tin nhân viên cần thêm đầy đủ vào các ô trống trên màn hình
+lưu ý: nhân viên có mã khác nhau
+sau đó bấm nút lưu lại
+

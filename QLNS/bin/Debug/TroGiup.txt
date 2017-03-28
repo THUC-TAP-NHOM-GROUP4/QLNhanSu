@@ -1,0 +1,51 @@
+﻿Thông Tin Hệ Thống
+Người dùng : phân quyền người sử dụng
+Thay đổi mật khẩu: tạo hoặc thay đổi mật khẩu người dùng hiện tại
+Cấu hình phần mềm : Định dạng phần mềm trước khi sử dụng
+Sao Lưu : Sao lưu dữ liệu dự phòng
+Phục Hồi : Phục hồi dữ liệu đã lưu
+Cấu Hình : Cấu hình dữ liệu trước khi đăng nhập
+
+Thiết lập danh mục: Chức vụ, công việc, phụ cấp, học vấn, tỉnh thành, dân tộc...
+
+Chọn Danh Mục -> Chức Vụ -> Thêm.
+
+Nhập thông tin Chức Vụ-> Lưu 
+
+1 Chọn thêm
+
+2 Nhập mã chức vụ
+
+3 Nhập tên chức vụ
+
+4 Chọn chức vụ phòng cấp trên
+
+Thiết lập phòng ban
+
+Chọn Nhân Sự -> Phòng Ban -> Thêm -> Lưu
+
+1 Chọn thêm
+
+2 Nhập mã phòng ban
+
+3 Nhập tên phòng ban
+
+4 Chọn phòng ban cấp trên
+
+Thiết lập nhân viên
+
+Chọn Nhân Sự -> Nhân Viên -> Thêm
+
+Nhập thông tin nhân viên -> Lưu
+
+Tạo hợp đồng cho nhân viên
+
+Chọn Hợp Đồng -> Nhân Viên -> Thêm
+
+Tạo Hợp Đồng -> Lưu
+
+1 Nhập mã hợp đồng 
+
+2 Chọn tên hợp đồng
+
+3 Chọn ngày tạo hợp đồng và ngày kết thúc
