@@ -196,9 +196,9 @@ namespace QLNS.Controller
                 + "',maphongban='"+ maphongban + "',matdhv='"+ matdhv + "' where ma ='"+ ma + "'");
         }
 
-        public void Xoa(string txtma)
+        public void Xoa(string ma)
         {
-            da.NonQuery("Delete from NhanVien where ma = '" + txtma + "' ");
+            da.NonQuery("Delete from NhanVien where ma = '" + ma + "' ");
         }
         public bool Them(NhanSu nv)
         {

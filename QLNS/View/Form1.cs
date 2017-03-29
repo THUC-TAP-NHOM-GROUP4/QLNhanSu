@@ -23,11 +23,11 @@ namespace QLNS
             InitializeComponent();
 
             ImageList imageList1 = new ImageList();
-            imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\19.png"));
+            /*imageList1.Images.Add("key1", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\19.png"));
             imageList1.Images.Add("key2", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\20.png"));
             imageList1.Images.Add("key3", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\1.png"));
             imageList1.Images.Add("key4", Image.FromFile(@"E:\HOC_KY_6\ThucTapNhom\PROJECT\QLNhanSu\QLNS\Resources\16.png"));
-
+            */
             //initialize the tab control
             TabControl tabControl1 = new TabControl();
             tabControl1.Dock = DockStyle.Fill;
@@ -200,22 +200,24 @@ namespace QLNS
         }
 
         NhanSu nv = new NhanSu();
-      
+        frmXoa Delete;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                control.Xoa(nv.ma);
-                MessageBox.Show("Đã Xóa Thành Công!");
-                dgvNhanSu.DataSource = da.Query("select *from NhanVien");
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi Không Thể Xóa");
-            }
+            string s = dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[0].Value.ToString() + "_"
+            + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[1].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[2].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[3].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[4].Value.ToString() + "_"
+             + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[5].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[6].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[7].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[8].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[10].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[10].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[11].Value.ToString();
+            Delete = new frmXoa(s);
+            Delete.ShowDialog();
+            dgvNhanSu.DataSource = da.Query("select *from NhanVien");
         }
 
         private void tpHDSuDung_Click(object sender, EventArgs e)
@@ -353,6 +355,17 @@ namespace QLNS
         private void btnTT_Thoat_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void tvStile_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            TreeNode nName = e.Node;
+            string webPage = "";
+            webPage = $"{Application.StartupPath}\\HeThong.html";
+            if (webPage != "")
+            {
+                wbStile.Navigate(webPage);
+            }
         }
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="View\frmUpdate.Designer.cs">
       <DependentUpon>frmUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmXoa.Designer.cs">
+      <DependentUpon>frmXoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\frmAdd.resx">
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmUpdate.resx">
       <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmXoa.resx">
+      <DependentUpon>frmXoa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

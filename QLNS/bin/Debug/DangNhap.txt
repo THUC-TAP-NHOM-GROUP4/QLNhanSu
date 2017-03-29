@@ -1,0 +1,4 @@
+﻿Cách 1:  Đăng nhập click vào biểu tượng đăng nhập trên Desktop.
+ sau khi đăng nhập bạn có thể xem thông  tin của nhân viên trong công ty 
+và chỉnh sửa chúng
+
