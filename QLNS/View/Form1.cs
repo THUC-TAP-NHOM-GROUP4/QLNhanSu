@@ -184,11 +184,6 @@ namespace QLNS
             dgvNhanSu.DataSource = da.Query("select *from NhanVien");
         }
 
-        private void dgvNhanSu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void lblTroGiup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControl_Chung.SelectTab(tpHDSuDung);
