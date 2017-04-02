@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNS));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Hệ Thống");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Hệ Thống");
             this.tabControl_Chung = new System.Windows.Forms.TabControl();
             this.tpTrangChu = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -94,10 +94,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.wbStile = new System.Windows.Forms.WebBrowser();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tvStile = new System.Windows.Forms.TreeView();
             this.tpLienHe = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.tvStile = new System.Windows.Forms.TreeView();
             this.tabControl_Chung.SuspendLayout();
             this.tpTrangChu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -363,6 +363,7 @@
             this.dgvNhanSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanSu.Location = new System.Drawing.Point(0, 46);
             this.dgvNhanSu.Name = "dgvNhanSu";
+            this.dgvNhanSu.ReadOnly = true;
             this.dgvNhanSu.Size = new System.Drawing.Size(874, 441);
             this.dgvNhanSu.TabIndex = 0;
             // 
@@ -841,28 +842,23 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-
-            //// tvStile
-            //// 
+            // tvStile
+            // 
             this.tvStile.BackColor = System.Drawing.SystemColors.Highlight;
             this.tvStile.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvStile.Location = new System.Drawing.Point(3, 18);
             this.tvStile.Name = "tvStile";
-            treeNode1.Name = "HeThong";
-            treeNode1.Tag = "";
-            treeNode1.Text = "Hệ Thống";
-            //treeNode2.Name = "TroGup";
-            //treeNode2.Tag = "D:\\GITHUB\\QLNhanSu\\TroGiup.txt";
-            //treeNode2.Text = "Trợ Giúp";
+            treeNode2.Name = "HeThong";
+            treeNode2.Tag = "";
+            treeNode2.Text = "Hệ Thống";
             this.tvStile.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-          //  treeNode2,
-            treeNode1});
-            this.tvStile.Size = new System.Drawing.Size(194, 517);
+            treeNode2,
+            treeNode2,
+            treeNode2});
+            this.tvStile.Size = new System.Drawing.Size(200, 517);
             this.tvStile.TabIndex = 0;
-            this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick);
+            this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick_1);
             // 
-
             // tpLienHe
             // 
             this.tpLienHe.Location = new System.Drawing.Point(4, 25);
@@ -876,7 +872,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 579);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 578);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(884, 32);
             this.flowLayoutPanel1.TabIndex = 6;
@@ -890,25 +886,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Copyright by NHOM 4-THUC TAP NHOM  2017";
             // 
-            // tvStile
-            // 
-            this.tvStile.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tvStile.Location = new System.Drawing.Point(3, 18);
-            this.tvStile.Name = "tvStile";
-            treeNode1.Name = "HeThong";
-            treeNode1.Text = "Hệ Thống";
-            this.tvStile.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.tvStile.Size = new System.Drawing.Size(200, 517);
-            this.tvStile.TabIndex = 0;
-            this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick_1);
-            // 
             // QLNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(884, 611);
+            this.ClientSize = new System.Drawing.Size(884, 610);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tabControl_Chung);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
