@@ -85,7 +85,6 @@
             // 
             // cbbmatdhv
             // 
-            this.cbbmatdhv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbmatdhv.FormattingEnabled = true;
             this.cbbmatdhv.Location = new System.Drawing.Point(140, 403);
             this.cbbmatdhv.Name = "cbbmatdhv";
@@ -94,7 +93,6 @@
             // 
             // cbbmaphongban
             // 
-            this.cbbmaphongban.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbmaphongban.FormattingEnabled = true;
             this.cbbmaphongban.Location = new System.Drawing.Point(140, 368);
             this.cbbmaphongban.Name = "cbbmaphongban";
@@ -103,16 +101,15 @@
             // 
             // cbbmaluong
             // 
-            this.cbbmaluong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbmaluong.FormattingEnabled = true;
             this.cbbmaluong.Location = new System.Drawing.Point(140, 333);
             this.cbbmaluong.Name = "cbbmaluong";
             this.cbbmaluong.Size = new System.Drawing.Size(225, 21);
             this.cbbmaluong.TabIndex = 89;
+         
             // 
             // cbbmachucvu
             // 
-            this.cbbmachucvu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbmachucvu.FormattingEnabled = true;
             this.cbbmachucvu.Location = new System.Drawing.Point(140, 298);
             this.cbbmachucvu.Name = "cbbmachucvu";

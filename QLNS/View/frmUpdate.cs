@@ -29,7 +29,7 @@ namespace QLNS.View
             string[] str1 = str.Split('_');
             txtma.Text = str1[0];
             txtten.Text = str1[1];
-            if (str[2].ToString() == "1")
+            if (str[3].ToString() == "1")
                 rdbnam.Checked = true;
             else rbdnu.Checked = true;
             txtdiachi.Text = str1[4];
@@ -40,44 +40,14 @@ namespace QLNS.View
             cbbmaluong.Text = str1[9];
             cbbmaphongban.Text = str1[10];
             cbbmatdhv.Text = str1[11];
-            cbbmachucvu.DataSource = control.Convert(da.Query("select ma from ChucVu"));
-            cbbmaluong.DataSource = control.Convert(da.Query("select ma from Luong"));
-            cbbmatdhv.DataSource = control.Convert(da.Query("select ma from TrinhDoHocVan"));
-            cbbmaphongban.DataSource = control.Convert(da.Query("select ma from PhongBan"));
+            cbbmachucvu.DataSource = control.Convert(da.Query("select ten from ChucVu"));
+            cbbmaluong.DataSource = control.Convert(da.Query("select luongcoban from Luong"));
+            cbbmatdhv.DataSource = control.Convert(da.Query("select ten from TrinhDoHocVan"));
+            cbbmaphongban.DataSource = control.Convert(da.Query("select ten from PhongBan"));
         }
         DataAccess da = new DataAccess();
         NhanSu nv = new NhanSu();
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
-            txtma.Enabled = true;
-            // if (txtten.Text == "" || txtsocmnd.Text == "" || txtmaluong.Text == "" || txtemali.Text == "" || txtdienthoai.Text == "" || txtdiachi.Text == "")
-            //   MessageBox.Show("Vui lòng xem lại có thể bạn chưa chọn đối tượng");
-            //  else
-            // {
-            //    if (txtten.Text != "" || txtsocmnd.Text != "" || txtmaluong.Text != "" || txtemali.Text != "" || txtdienthoai.Text != "" || txtdiachi.Text != "")
-            //    {
-            nv.ten = txtten.Text.ToString().Trim();
-            nv.ngaysinh = DateTime.Parse(dtpngaysinh.Value.ToShortDateString());
-            if (rdbnam.Checked)
-                nv.gioitinh = 1;
-            else nv.gioitinh = 0;
-            nv.diachi = txtdiachi.Text.ToString().Trim();
-            nv.socmnd = txtsocmnd.Text.ToString().Trim();
-            nv.dienthoai = txtdienthoai.Text.ToString().Trim();
-            nv.email = txtemali.Text.ToString().Trim();
-            nv.maChucVu = cbbmachucvu.Text;
-            nv.maluong = cbbmaluong.Text;
-            nv.maphongban = cbbmaphongban.Text;
-            nv.maTDHV = cbbmatdhv.Text;
-            control.Sua(nv.ma, nv.ten, nv.diachi, nv.ngaysinh, nv.gioitinh, nv.socmnd, nv.dienthoai, nv.email, nv.maChucVu, nv.maluong, nv.maphongban, nv.maTDHV);
-            MessageBox.Show("Thành công");
-            //   }
-            //  else
-            //     MessageBox.Show("Vui lòng xem lại");
-            //  }
-        }
-
+      
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -87,14 +57,8 @@ namespace QLNS.View
         private void btnSua_Click_1(object sender, EventArgs e)
         {
 
+            List<object> lst = new List<object>();
             txtma.Enabled = true;
-            // if (txtten.Text == "" || txtsocmnd.Text == "" || txtmaluong.Text == "" || txtemali.Text == "" || txtdienthoai.Text == "" || txtdiachi.Text == "")
-            //   MessageBox.Show("Vui lòng xem lại có thể bạn chưa chọn đối tượng");
-            //  else
-            // {
-            //    if (txtten.Text != "" || txtsocmnd.Text != "" || txtmaluong.Text != "" || txtemali.Text != "" || txtdienthoai.Text != "" || txtdiachi.Text != "")
-            //    {
-            nv.ma = txtma.Text;
             nv.ten = txtten.Text.ToString().Trim();
             nv.ngaysinh = DateTime.Parse(dtpngaysinh.Value.ToShortDateString());
             if (rdbnam.Checked)
@@ -104,16 +68,27 @@ namespace QLNS.View
             nv.socmnd = txtsocmnd.Text.ToString().Trim();
             nv.dienthoai = txtdienthoai.Text.ToString().Trim();
             nv.email = txtemali.Text.ToString().Trim();
+            
+            lst = da.Convert(da.Query("select ma from Chucvu where ten=N'" + cbbmachucvu.Text + "'"));
+            cbbmachucvu.Text = lst[0].ToString();
+            lst = da.Convert(da.Query("select ma from Luong where luongcoban=N'" + cbbmaluong.Text + "'"));
+            cbbmaluong.Text = lst[0].ToString();
+            lst = da.Convert(da.Query("select ma from PhongBan where ten=N'" + cbbmaphongban.Text + "'"));
+            cbbmaphongban.Text = lst[0].ToString();
+            lst = da.Convert(da.Query("select ma from TrinhDoHocVan where ten=N'" + cbbmatdhv.Text + "'"));
+            cbbmatdhv.Text = lst[0].ToString();
+
             nv.maChucVu = cbbmachucvu.Text;
-            nv.maluong = cbbmaluong.Text;
+            //nv.maluong = cbbmaluong.Text;
             nv.maphongban = cbbmaphongban.Text;
             nv.maTDHV = cbbmatdhv.Text;
             control.Sua(nv.ma, nv.ten, nv.diachi, nv.ngaysinh, nv.gioitinh, nv.socmnd, nv.dienthoai, nv.email, nv.maChucVu, nv.maluong, nv.maphongban, nv.maTDHV);
             MessageBox.Show("Thành công");
-            //   }
-            //  else
-            //     MessageBox.Show("Vui lòng xem lại");
-            //  }
+            cbbmachucvu.DataSource = control.Convert(da.Query("select ten from ChucVu"));
+            cbbmaluong.DataSource = control.Convert(da.Query("select luongcoban from Luong"));
+            cbbmatdhv.DataSource = control.Convert(da.Query("select ten from TrinhDoHocVan"));
+            cbbmaphongban.DataSource = control.Convert(da.Query("select ten from PhongBan"));
+            
         }
 
         private void btnThoat_Click_1(object sender, EventArgs e)
@@ -122,5 +97,7 @@ namespace QLNS.View
             QLNS fr = new QLNS();
             fr.Show();
         }
+
+      
     }
 }

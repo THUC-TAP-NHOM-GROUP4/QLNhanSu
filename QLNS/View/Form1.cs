@@ -176,9 +176,10 @@ namespace QLNS
               + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[6].Value.ToString() + "_"
               + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[7].Value.ToString() + "_"
               + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[8].Value.ToString() + "_"
-              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[10].Value.ToString() + "_"
+              + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[9].Value.ToString() + "_"
               + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[10].Value.ToString() + "_"
               + dgvNhanSu.Rows[dgvNhanSu.CurrentRow.Index].Cells[11].Value.ToString();
+         
             update = new frmUpdate(s);
             update.ShowDialog();
             dgvNhanSu.DataSource = da.Query("select *from NhanVien");
