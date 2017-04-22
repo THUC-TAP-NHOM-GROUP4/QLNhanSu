@@ -78,11 +78,12 @@ namespace QLNS.Controller
 
         public NhanSu[] getListNhanVien()
         {
-            //DataTable table = da.Query("Select *from NhanVien");
+         //   DataTable table = da.Query("Select *from NhanVien");
             DataTable table = da.Query("select nv.ma, nv.ten, nv.ngaysinh, nv.gioitinh, nv.diachi,nv.socmnd, nv.dienthoai,  "
                        + " nv.email, cv.ten as chucvu, pb.ten as phongban, nv.maluong, tdhv.ten as TDHV from NhanVien nv "
                        + " inner join ChucVu cv on nv.maChucVu = cv.ma inner join PhongBan pb on nv.maphongban = pb.ma "
                        + " inner join TrinhDoHocVan tdhv on tdhv.ma = nv.maTDHV");
+
             int n = table.Rows.Count;
             int i;
             if (n == 0) return null;
