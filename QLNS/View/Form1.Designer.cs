@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNS));
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Hệ Thống");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Hệ Thống");
             this.tabControl_Chung = new System.Windows.Forms.TabControl();
             this.tpTrangChu = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -428,7 +428,7 @@
             // 
             this.txtTenNV.Enabled = false;
             this.txtTenNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenNV.Location = new System.Drawing.Point(112, 138);
+            this.txtTenNV.Location = new System.Drawing.Point(112, 119);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(171, 25);
             this.txtTenNV.TabIndex = 25;
@@ -438,7 +438,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label22.Location = new System.Drawing.Point(3, 146);
+            this.label22.Location = new System.Drawing.Point(3, 127);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(103, 17);
             this.label22.TabIndex = 24;
@@ -460,7 +460,7 @@
             // 
             this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaNV.Location = new System.Drawing.Point(112, 98);
+            this.txtMaNV.Location = new System.Drawing.Point(112, 81);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(171, 25);
             this.txtMaNV.TabIndex = 18;
@@ -470,7 +470,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(3, 106);
+            this.label4.Location = new System.Drawing.Point(3, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 17;
@@ -776,7 +776,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(152, 177);
+            this.label5.Location = new System.Drawing.Point(172, 154);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 18);
             this.label5.TabIndex = 7;
@@ -786,10 +786,10 @@
             // 
             this.dtgDSNV.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtgDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDSNV.Location = new System.Drawing.Point(0, 198);
+            this.dtgDSNV.Location = new System.Drawing.Point(0, 175);
             this.dtgDSNV.Name = "dtgDSNV";
             this.dtgDSNV.RowHeadersWidth = 40;
-            this.dtgDSNV.Size = new System.Drawing.Size(555, 332);
+            this.dtgDSNV.Size = new System.Drawing.Size(555, 355);
             this.dtgDSNV.TabIndex = 1;
             this.dtgDSNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDSNV_CellContentClick);
             this.dtgDSNV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgDSNV_CellMouseClick);
@@ -852,13 +852,13 @@
             this.tvStile.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvStile.Location = new System.Drawing.Point(3, 18);
             this.tvStile.Name = "tvStile";
-            treeNode3.Name = "HeThong";
-            treeNode3.Tag = "";
-            treeNode3.Text = "Hệ Thống";
+            treeNode4.Name = "HeThong";
+            treeNode4.Tag = "";
+            treeNode4.Text = "Hệ Thống";
             this.tvStile.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode3,
-            treeNode3});
+            treeNode4,
+            treeNode4,
+            treeNode4});
             this.tvStile.Size = new System.Drawing.Size(200, 517);
             this.tvStile.TabIndex = 0;
             this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick_1);
@@ -894,7 +894,7 @@
             // 
             this.cbTimMaNV.AutoSize = true;
             this.cbTimMaNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbTimMaNV.Location = new System.Drawing.Point(292, 100);
+            this.cbTimMaNV.Location = new System.Drawing.Point(292, 83);
             this.cbTimMaNV.Name = "cbTimMaNV";
             this.cbTimMaNV.Size = new System.Drawing.Size(175, 21);
             this.cbTimMaNV.TabIndex = 28;
@@ -906,7 +906,7 @@
             // 
             this.cbTimTen.AutoSize = true;
             this.cbTimTen.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbTimTen.Location = new System.Drawing.Point(292, 140);
+            this.cbTimTen.Location = new System.Drawing.Point(292, 121);
             this.cbTimTen.Name = "cbTimTen";
             this.cbTimTen.Size = new System.Drawing.Size(142, 21);
             this.cbTimTen.TabIndex = 29;

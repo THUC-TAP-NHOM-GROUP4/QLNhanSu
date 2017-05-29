@@ -237,18 +237,6 @@ namespace QLNS
             }
         }
 
-   
-
-
-        //private void cbbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
-        //{
-
-        //    dtgDSNV.Refresh();
-
-        //    string str = cbbPhongBan.SelectedItem.ToString();
-        //    dtgDSNV.DataSource = control.getListNhanVienPB(str);
-        //    LoadDtgDSNV();
-        //}
 
         private void txtMaNV_TextChanged(object sender, EventArgs e)
         {
