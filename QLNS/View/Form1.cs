@@ -346,6 +346,8 @@ namespace QLNS
         private void chBChon_CheckedChanged_1(object sender, EventArgs e)
         {
             cbbPhongBan.Enabled = true;
+            txtMaNV.Enabled = false;
+            txtTenNV.Enabled = false;
         }
 
         private void cbbPhongBan_SelectedIndexChanged(object sender, EventArgs e)
@@ -386,11 +388,15 @@ namespace QLNS
         private void cbTimMaNV_CheckedChanged(object sender, EventArgs e)
         {
             txtMaNV.Enabled = true;
+            cbbPhongBan.Enabled = false;
+            txtTenNV.Enabled = false;
         }
 
         private void cbTimTen_CheckedChanged(object sender, EventArgs e)
         {
             txtTenNV.Enabled = true;
+            cbbPhongBan.Enabled = false;
+            txtMaNV.Enabled = false;
         }
     }
 }
