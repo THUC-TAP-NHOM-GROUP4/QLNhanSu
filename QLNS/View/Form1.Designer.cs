@@ -55,7 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.chBChon = new System.Windows.Forms.CheckBox();
+            this.cbTimPhongBan = new System.Windows.Forms.CheckBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -98,6 +98,8 @@
             this.tpLienHe = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbTimMaNV = new System.Windows.Forms.CheckBox();
+            this.cbTimTen = new System.Windows.Forms.CheckBox();
             this.tabControl_Chung.SuspendLayout();
             this.tpTrangChu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -370,11 +372,13 @@
             // tpTimKiem
             // 
             this.tpTimKiem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tpTimKiem.Controls.Add(this.cbTimTen);
+            this.tpTimKiem.Controls.Add(this.cbTimMaNV);
             this.tpTimKiem.Controls.Add(this.cbbPhongBan);
             this.tpTimKiem.Controls.Add(this.label1);
             this.tpTimKiem.Controls.Add(this.txtTenNV);
             this.tpTimKiem.Controls.Add(this.label22);
-            this.tpTimKiem.Controls.Add(this.chBChon);
+            this.tpTimKiem.Controls.Add(this.cbTimPhongBan);
             this.tpTimKiem.Controls.Add(this.txtMaNV);
             this.tpTimKiem.Controls.Add(this.label4);
             this.tpTimKiem.Controls.Add(this.label9);
@@ -406,7 +410,7 @@
             "Phòng lễ tân"});
             this.cbbPhongBan.Location = new System.Drawing.Point(112, 45);
             this.cbbPhongBan.Name = "cbbPhongBan";
-            this.cbbPhongBan.Size = new System.Drawing.Size(160, 24);
+            this.cbbPhongBan.Size = new System.Drawing.Size(171, 24);
             this.cbbPhongBan.TabIndex = 27;
             this.cbbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cbbPhongBan_SelectedIndexChanged);
             // 
@@ -422,10 +426,11 @@
             // 
             // txtTenNV
             // 
+            this.txtTenNV.Enabled = false;
             this.txtTenNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenNV.Location = new System.Drawing.Point(395, 96);
+            this.txtTenNV.Location = new System.Drawing.Point(112, 138);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(160, 25);
+            this.txtTenNV.Size = new System.Drawing.Size(171, 25);
             this.txtTenNV.TabIndex = 25;
             this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
@@ -433,26 +438,27 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label22.Location = new System.Drawing.Point(289, 102);
+            this.label22.Location = new System.Drawing.Point(3, 146);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(103, 17);
             this.label22.TabIndex = 24;
             this.label22.Text = "Tên nhân viên:";
             // 
-            // chBChon
+            // cbTimPhongBan
             // 
-            this.chBChon.AutoSize = true;
-            this.chBChon.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chBChon.Location = new System.Drawing.Point(294, 46);
-            this.chBChon.Name = "chBChon";
-            this.chBChon.Size = new System.Drawing.Size(134, 21);
-            this.chBChon.TabIndex = 23;
-            this.chBChon.Text = "Chọn phòng ban";
-            this.chBChon.UseVisualStyleBackColor = true;
-            this.chBChon.CheckedChanged += new System.EventHandler(this.chBChon_CheckedChanged_1);
+            this.cbTimPhongBan.AutoSize = true;
+            this.cbTimPhongBan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTimPhongBan.Location = new System.Drawing.Point(292, 48);
+            this.cbTimPhongBan.Name = "cbTimPhongBan";
+            this.cbTimPhongBan.Size = new System.Drawing.Size(124, 21);
+            this.cbTimPhongBan.TabIndex = 23;
+            this.cbTimPhongBan.Text = "Tìm phòng ban";
+            this.cbTimPhongBan.UseVisualStyleBackColor = true;
+            this.cbTimPhongBan.CheckedChanged += new System.EventHandler(this.chBChon_CheckedChanged_1);
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaNV.Location = new System.Drawing.Point(112, 98);
             this.txtMaNV.Name = "txtMaNV";
@@ -464,7 +470,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(6, 104);
+            this.label4.Location = new System.Drawing.Point(3, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 17;
@@ -770,7 +776,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(151, 138);
+            this.label5.Location = new System.Drawing.Point(152, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 18);
             this.label5.TabIndex = 7;
@@ -780,10 +786,10 @@
             // 
             this.dtgDSNV.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtgDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDSNV.Location = new System.Drawing.Point(0, 159);
+            this.dtgDSNV.Location = new System.Drawing.Point(0, 198);
             this.dtgDSNV.Name = "dtgDSNV";
             this.dtgDSNV.RowHeadersWidth = 40;
-            this.dtgDSNV.Size = new System.Drawing.Size(555, 371);
+            this.dtgDSNV.Size = new System.Drawing.Size(555, 332);
             this.dtgDSNV.TabIndex = 1;
             this.dtgDSNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDSNV_CellContentClick);
             this.dtgDSNV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgDSNV_CellMouseClick);
@@ -883,6 +889,30 @@
             this.label3.Size = new System.Drawing.Size(311, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Copyright by NHOM 4-THUC TAP NHOM  2017";
+            // 
+            // cbTimMaNV
+            // 
+            this.cbTimMaNV.AutoSize = true;
+            this.cbTimMaNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTimMaNV.Location = new System.Drawing.Point(292, 100);
+            this.cbTimMaNV.Name = "cbTimMaNV";
+            this.cbTimMaNV.Size = new System.Drawing.Size(175, 21);
+            this.cbTimMaNV.TabIndex = 28;
+            this.cbTimMaNV.Text = "Tìm theo mã nhân viên";
+            this.cbTimMaNV.UseVisualStyleBackColor = true;
+            this.cbTimMaNV.CheckedChanged += new System.EventHandler(this.cbTimMaNV_CheckedChanged);
+            // 
+            // cbTimTen
+            // 
+            this.cbTimTen.AutoSize = true;
+            this.cbTimTen.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTimTen.Location = new System.Drawing.Point(292, 140);
+            this.cbTimTen.Name = "cbTimTen";
+            this.cbTimTen.Size = new System.Drawing.Size(142, 21);
+            this.cbTimTen.TabIndex = 29;
+            this.cbTimTen.Text = "Tìm tên nhân viên";
+            this.cbTimTen.UseVisualStyleBackColor = true;
+            this.cbTimTen.CheckedChanged += new System.EventHandler(this.cbTimTen_CheckedChanged);
             // 
             // QLNS
             // 
@@ -991,7 +1021,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox chBChon;
+        private System.Windows.Forms.CheckBox cbTimPhongBan;
+        private System.Windows.Forms.CheckBox cbTimTen;
+        private System.Windows.Forms.CheckBox cbTimMaNV;
     }
 }
 

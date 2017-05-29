@@ -394,5 +394,15 @@ namespace QLNS
             }
             LoadDtgDSNV();
         }
+
+        private void cbTimMaNV_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMaNV.Enabled = true;
+        }
+
+        private void cbTimTen_CheckedChanged(object sender, EventArgs e)
+        {
+            txtTenNV.Enabled = true;
+        }
     }
 }
