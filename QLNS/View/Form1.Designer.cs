@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Hệ Thống");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNS));
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Hệ Thống");
             this.tabControl_Chung = new System.Windows.Forms.TabControl();
             this.tpTrangChu = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,11 +44,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnXem = new System.Windows.Forms.Button();
             this.dgvNhanSu = new System.Windows.Forms.DataGridView();
             this.tpTimKiem = new System.Windows.Forms.TabPage();
             this.cbbPhongBan = new System.Windows.Forms.ComboBox();
@@ -100,6 +98,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbTimMaNV = new System.Windows.Forms.CheckBox();
             this.cbTimTen = new System.Windows.Forms.CheckBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl_Chung.SuspendLayout();
             this.tpTrangChu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -113,6 +112,7 @@
             this.tpHDSuDung.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tpLienHe.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -254,11 +254,9 @@
             // 
             this.panel2.Controls.Add(this.btnTimKiem);
             this.panel2.Controls.Add(this.btnThoat);
-            this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.btnXem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 490);
             this.panel2.Name = "panel2";
@@ -269,7 +267,7 @@
             // 
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(631, 3);
+            this.btnTimKiem.Location = new System.Drawing.Point(709, 3);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(80, 40);
             this.btnTimKiem.TabIndex = 6;
@@ -291,24 +289,11 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // button8
-            // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(709, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 40);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Lưu";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // btnXoa
             // 
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(552, 3);
+            this.btnXoa.Location = new System.Drawing.Point(630, 3);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 40);
             this.btnXoa.TabIndex = 3;
@@ -321,7 +306,7 @@
             // 
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(473, 3);
+            this.btnSua.Location = new System.Drawing.Point(551, 3);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.TabIndex = 2;
@@ -334,7 +319,7 @@
             // 
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(395, 3);
+            this.btnThem.Location = new System.Drawing.Point(473, 3);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(80, 40);
             this.btnThem.TabIndex = 1;
@@ -342,18 +327,6 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXem
-            // 
-            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
-            this.btnXem.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnXem.Location = new System.Drawing.Point(322, 3);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(80, 40);
-            this.btnXem.TabIndex = 0;
-            this.btnXem.Text = "Xem";
-            this.btnXem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXem.UseVisualStyleBackColor = true;
             // 
             // dgvNhanSu
             // 
@@ -852,19 +825,20 @@
             this.tvStile.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvStile.Location = new System.Drawing.Point(3, 18);
             this.tvStile.Name = "tvStile";
-            treeNode4.Name = "HeThong";
-            treeNode4.Tag = "";
-            treeNode4.Text = "Hệ Thống";
+            treeNode6.Name = "HeThong";
+            treeNode6.Tag = "";
+            treeNode6.Text = "Hệ Thống";
             this.tvStile.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode4,
-            treeNode4});
+            treeNode6,
+            treeNode6,
+            treeNode6});
             this.tvStile.Size = new System.Drawing.Size(200, 517);
             this.tvStile.TabIndex = 0;
             this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick_1);
             // 
             // tpLienHe
             // 
+            this.tpLienHe.Controls.Add(this.richTextBox1);
             this.tpLienHe.Location = new System.Drawing.Point(4, 25);
             this.tpLienHe.Name = "tpLienHe";
             this.tpLienHe.Size = new System.Drawing.Size(874, 538);
@@ -914,6 +888,15 @@
             this.cbTimTen.UseVisualStyleBackColor = true;
             this.cbTimTen.CheckedChanged += new System.EventHandler(this.cbTimTen_CheckedChanged);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(7, 4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(864, 531);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // QLNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -947,6 +930,7 @@
             this.tpHDSuDung.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.tpLienHe.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -968,11 +952,9 @@
         private System.Windows.Forms.TabPage tpLienHe;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.DataGridView dgvNhanSu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -1024,6 +1006,7 @@
         private System.Windows.Forms.CheckBox cbTimPhongBan;
         private System.Windows.Forms.CheckBox cbTimTen;
         private System.Windows.Forms.CheckBox cbTimMaNV;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
