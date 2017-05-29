@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNS));
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Hệ Thống");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Hệ Thống");
             this.tabControl_Chung = new System.Windows.Forms.TabControl();
             this.tpTrangChu = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,13 +51,13 @@
             this.btnXem = new System.Windows.Forms.Button();
             this.dgvNhanSu = new System.Windows.Forms.DataGridView();
             this.tpTimKiem = new System.Windows.Forms.TabPage();
+            this.cbbPhongBan = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.cbbPhongBan = new System.Windows.Forms.ComboBox();
             this.chBChon = new System.Windows.Forms.CheckBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -370,13 +370,13 @@
             // tpTimKiem
             // 
             this.tpTimKiem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tpTimKiem.Controls.Add(this.cbbPhongBan);
+            this.tpTimKiem.Controls.Add(this.label1);
             this.tpTimKiem.Controls.Add(this.txtTenNV);
             this.tpTimKiem.Controls.Add(this.label22);
-            this.tpTimKiem.Controls.Add(this.cbbPhongBan);
             this.tpTimKiem.Controls.Add(this.chBChon);
             this.tpTimKiem.Controls.Add(this.txtMaNV);
             this.tpTimKiem.Controls.Add(this.label4);
-            this.tpTimKiem.Controls.Add(this.label1);
             this.tpTimKiem.Controls.Add(this.label9);
             this.tpTimKiem.Controls.Add(this.label8);
             this.tpTimKiem.Controls.Add(this.panel3);
@@ -389,26 +389,6 @@
             this.tpTimKiem.Size = new System.Drawing.Size(874, 538);
             this.tpTimKiem.TabIndex = 2;
             this.tpTimKiem.Text = "Tìm kiếm";
-            // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenNV.Location = new System.Drawing.Point(388, 93);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(160, 25);
-            this.txtTenNV.TabIndex = 22;
-            this.txtTenNV.Click += new System.EventHandler(this.txtTenNV_Click);
-            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label22.Location = new System.Drawing.Point(282, 99);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 17);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "Tên nhân viên:";
             // 
             // cbbPhongBan
             // 
@@ -424,53 +404,71 @@
             "Phòng kinh doanh",
             "Phòng ngoại giao",
             "Phòng lễ tân"});
-            this.cbbPhongBan.Location = new System.Drawing.Point(118, 49);
+            this.cbbPhongBan.Location = new System.Drawing.Point(112, 45);
             this.cbbPhongBan.Name = "cbbPhongBan";
             this.cbbPhongBan.Size = new System.Drawing.Size(160, 24);
-            this.cbbPhongBan.TabIndex = 20;
-            this.cbbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cbbPhongBan_SelectedIndexChanged_1);
+            this.cbbPhongBan.TabIndex = 27;
+            this.cbbPhongBan.SelectedIndexChanged += new System.EventHandler(this.cbbPhongBan_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(3, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Phòng ban:";
+            // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenNV.Location = new System.Drawing.Point(395, 96);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(160, 25);
+            this.txtTenNV.TabIndex = 25;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label22.Location = new System.Drawing.Point(289, 102);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(103, 17);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "Tên nhân viên:";
             // 
             // chBChon
             // 
             this.chBChon.AutoSize = true;
             this.chBChon.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chBChon.Location = new System.Drawing.Point(287, 49);
+            this.chBChon.Location = new System.Drawing.Point(294, 46);
             this.chBChon.Name = "chBChon";
             this.chBChon.Size = new System.Drawing.Size(134, 21);
-            this.chBChon.TabIndex = 19;
+            this.chBChon.TabIndex = 23;
             this.chBChon.Text = "Chọn phòng ban";
             this.chBChon.UseVisualStyleBackColor = true;
-            this.chBChon.CheckedChanged += new System.EventHandler(this.chBChon_CheckedChanged);
+            this.chBChon.CheckedChanged += new System.EventHandler(this.chBChon_CheckedChanged_1);
             // 
             // txtMaNV
             // 
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaNV.Location = new System.Drawing.Point(116, 93);
+            this.txtMaNV.Location = new System.Drawing.Point(112, 98);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(160, 25);
+            this.txtMaNV.Size = new System.Drawing.Size(171, 25);
             this.txtMaNV.TabIndex = 18;
-            this.txtMaNV.Click += new System.EventHandler(this.txtMaNV_Click);
             this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(10, 99);
+            this.label4.Location = new System.Drawing.Point(6, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 17);
             this.label4.TabIndex = 17;
             this.label4.Text = "Mã nhân viên:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(9, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Phòng ban:";
             // 
             // label9
             // 
@@ -772,7 +770,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(150, 136);
+            this.label5.Location = new System.Drawing.Point(151, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 18);
             this.label5.TabIndex = 7;
@@ -848,13 +846,13 @@
             this.tvStile.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvStile.Location = new System.Drawing.Point(3, 18);
             this.tvStile.Name = "tvStile";
-            treeNode2.Name = "HeThong";
-            treeNode2.Tag = "";
-            treeNode2.Text = "Hệ Thống";
+            treeNode3.Name = "HeThong";
+            treeNode3.Tag = "";
+            treeNode3.Text = "Hệ Thống";
             this.tvStile.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode2,
-            treeNode2});
+            treeNode3,
+            treeNode3,
+            treeNode3});
             this.tvStile.Size = new System.Drawing.Size(200, 517);
             this.tvStile.TabIndex = 0;
             this.tvStile.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvStile_NodeMouseClick_1);
@@ -963,13 +961,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.WebBrowser wbStile;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox cbbPhongBan;
-        private System.Windows.Forms.CheckBox chBChon;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtDienThoai;
@@ -994,6 +987,11 @@
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TreeView tvStile;
+        private System.Windows.Forms.ComboBox cbbPhongBan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTenNV;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.CheckBox chBChon;
     }
 }
 

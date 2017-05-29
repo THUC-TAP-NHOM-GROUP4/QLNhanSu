@@ -87,7 +87,7 @@ namespace QLNS
             dtgDSNV.Columns["maluong"].HeaderText = "Lương";
             dtgDSNV.Columns["maphongban"].HeaderText = "Phòng Ban";
             dtgDSNV.Columns["maTDHV"].HeaderText = "TDHV";
-
+            //Size
             dtgDSNV.Columns["ma"].Width = 60;
             dtgDSNV.Columns["ten"].Width = 150;
             dtgDSNV.Columns["socmnd"].Width = 100;
@@ -102,12 +102,12 @@ namespace QLNS
 
         }
 
-        private void chBChon_Click(object sender, EventArgs e)
-        {
-            cbbPhongBan.Enabled = true;
+        //private void chBChon_Click(object sender, EventArgs e)
+        //{
+        //    cbbPhongBan.Enabled = true;
             
 
-        }
+        //}
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -239,57 +239,40 @@ namespace QLNS
 
    
 
-        private void pbTT_DoiMatKhau_Click(object sender, EventArgs e)
-        {
 
-        }
+        //private void cbbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
+        //{
 
-        private void cbbPhongBan_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
+        //    dtgDSNV.Refresh();
 
-            dtgDSNV.Refresh();
-
-            string str = cbbPhongBan.SelectedItem.ToString();
-            dtgDSNV.DataSource = control.getListNhanVienPB(str);
-            LoadDtgDSNV();
-        }
+        //    string str = cbbPhongBan.SelectedItem.ToString();
+        //    dtgDSNV.DataSource = control.getListNhanVienPB(str);
+        //    LoadDtgDSNV();
+        //}
 
         private void txtMaNV_TextChanged(object sender, EventArgs e)
         {
-           
-            dtgDSNV.DataSource = control.getListNhanVienMa(txtMaNV.Text);
+
+            NhanSu[] list = control.getListNhanVienMa(txtMaNV.Text);
+            if (list != null)
+            {
+                dtgDSNV.DataSource = list;
+
+            }
+            else
+            {
+                dtgDSNV.DataSource = control.getListNhanVien();
+            }
             LoadDtgDSNV();
         }
 
-        private void txtTenNV_TextChanged(object sender, EventArgs e)
-        {
-           
-            dtgDSNV.DataSource = control.getListNhanVienTen(txtTenNV.Text);
-            LoadDtgDSNV();
-        }
-
-        private void chBChon_CheckedChanged(object sender, EventArgs e)
-        {
-            cbbPhongBan.Enabled = true;
-
-        }
+    
 
         private void dtgDSNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void txtMaNV_Click(object sender, EventArgs e)
-        {
-            chBChon.Enabled = false;
-            cbbPhongBan.Enabled = false;
-        }
-
-        private void txtTenNV_Click(object sender, EventArgs e)
-        {
-            chBChon.Enabled = false;
-            txtTenNV.Enabled = false;
-        }
 
         private void dtgDSNV_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -367,6 +350,49 @@ namespace QLNS
             {
                 wbStile.Navigate(webPage);
             }
+        }
+
+      
+    
+
+        private void chBChon_CheckedChanged_1(object sender, EventArgs e)
+        {
+            cbbPhongBan.Enabled = true;
+        }
+
+        private void cbbPhongBan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            dtgDSNV.Refresh();
+
+            string str = cbbPhongBan.SelectedItem.ToString();
+            NhanSu[] list= control.getListNhanVienPB(str);
+            if(list!=null)
+            {
+                dtgDSNV.DataSource = list;
+
+            }
+            else
+            {
+                dtgDSNV.DataSource = control.getListNhanVien();
+
+            }
+            LoadDtgDSNV();
+        }
+
+        private void txtTenNV_TextChanged(object sender, EventArgs e)
+        {
+            NhanSu[] list= control.getListNhanVienTen(txtTenNV.Text);
+        
+            if(list!=null)
+            {
+                dtgDSNV.DataSource = list;
+            }
+            else
+            {
+                dtgDSNV.DataSource = control.getListNhanVien();
+            }
+            LoadDtgDSNV();
         }
     }
 }
