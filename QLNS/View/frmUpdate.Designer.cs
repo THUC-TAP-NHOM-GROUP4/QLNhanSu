@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.cbbmatdhv = new System.Windows.Forms.ComboBox();
             this.cbbmaphongban = new System.Windows.Forms.ComboBox();
@@ -56,19 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThoat.Location = new System.Drawing.Point(269, 453);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(96, 31);
-            this.btnThoat.TabIndex = 95;
-            this.btnThoat.Text = "THOÁT";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click_1);
             // 
             // btnSua
             // 
@@ -106,7 +92,6 @@
             this.cbbmaluong.Name = "cbbmaluong";
             this.cbbmaluong.Size = new System.Drawing.Size(225, 21);
             this.cbbmaluong.TabIndex = 89;
-         
             // 
             // cbbmachucvu
             // 
@@ -301,7 +286,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 506);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.cbbmatdhv);
             this.Controls.Add(this.cbbmaphongban);
@@ -337,8 +321,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.ComboBox cbbmatdhv;
         private System.Windows.Forms.ComboBox cbbmaphongban;

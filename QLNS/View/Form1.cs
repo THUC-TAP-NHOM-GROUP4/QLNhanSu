@@ -182,7 +182,8 @@ namespace QLNS
          
             update = new frmUpdate(s);
             update.ShowDialog();
-            dgvNhanSu.DataSource = da.Query("DSNHANVIEN");
+
+            dgvNhanSu.DataSource = da.Query("[DSNHANVIEN]");
         }
 
         private void lblTroGiup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -59,6 +59,7 @@ namespace QLNS.View
 
             List<object> lst = new List<object>();
             txtma.Enabled = true;
+            nv.ma = txtma.Text;
             nv.ten = txtten.Text.ToString().Trim();
             nv.ngaysinh = DateTime.Parse(dtpngaysinh.Value.ToShortDateString());
             if (rdbnam.Checked)
@@ -79,16 +80,13 @@ namespace QLNS.View
             cbbmatdhv.Text = lst[0].ToString();
 
             nv.maChucVu = cbbmachucvu.Text;
-            //nv.maluong = cbbmaluong.Text;
+            nv.maluong = cbbmaluong.Text;
             nv.maphongban = cbbmaphongban.Text;
             nv.maTDHV = cbbmatdhv.Text;
             control.Sua(nv.ma, nv.ten, nv.diachi, nv.ngaysinh, nv.gioitinh, nv.socmnd, nv.dienthoai, nv.email, nv.maChucVu, nv.maluong, nv.maphongban, nv.maTDHV);
             MessageBox.Show("Thành công");
-            cbbmachucvu.DataSource = control.Convert(da.Query("select ten from ChucVu"));
-            cbbmaluong.DataSource = control.Convert(da.Query("select luongcoban from Luong"));
-            cbbmatdhv.DataSource = control.Convert(da.Query("select ten from TrinhDoHocVan"));
-            cbbmaphongban.DataSource = control.Convert(da.Query("select ten from PhongBan"));
             
+            this.Close();
         }
 
         private void btnThoat_Click_1(object sender, EventArgs e)
