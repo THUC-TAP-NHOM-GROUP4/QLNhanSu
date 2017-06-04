@@ -190,11 +190,18 @@ namespace QLNS.Controller
         }
         public void Sua(string ma, string ten, string diachi, DateTime ngaysinh, int gioitinh, string socmnd, string dienthoai, string email, string machucvu, string maluong, string maphongban, string matdhv)
         {
-            da.NonQuery("Update NhanVien set ten=N'"+ ten + "', diachi =N'"+ diachi
-                + "',ngaysinh='"+ ngaysinh + "', gioitinh='"
-                + gioitinh + "', socmnd='" + socmnd + "', dienthoai='"+ dienthoai + "',email='" + email
-                + "', maChucVu='"+ machucvu + "',maluong='"+ maluong
-                + "',maphongban='"+ maphongban + "',matdhv='"+ matdhv + "' where ma ='"+ ma + "'");
+            da.NonQuery("SuaThongTinNhanVien", new SqlParameter("@ma",ma)
+                                              , new SqlParameter("@ten", ten)
+                                              , new SqlParameter("@diachi", diachi)
+                                              , new SqlParameter("@ngaysinh", ngaysinh)
+                                              , new SqlParameter("@gioitinh", gioitinh)
+                                              , new SqlParameter("@sochungminh", socmnd)
+                                              , new SqlParameter("@dienthoai", dienthoai)
+                                              , new SqlParameter("@email", email)
+                                              , new SqlParameter("@machucvu", machucvu)
+                                              , new SqlParameter("@maluong", maluong)
+                                              , new SqlParameter("@maphongban", maphongban)
+                                              , new SqlParameter("@matdhv", matdhv));
         }
 
         public void Xoa(string ma)
